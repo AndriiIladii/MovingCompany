@@ -1,0 +1,15 @@
+// base
+
+@use "./base/reset";
+@use "./base/fonts";
+@use "./base/vars" as *;
+@use "./base/base";
+@use "./base/buttons";
+
+@use "./blocks/header";
+@use "./blocks/hero";
+@use "./blocks/services";
+@use "./blocks/prices";
+@use "./blocks/auto";
+@use "./blocks/statistic";
+@use "./blocks/gallery";

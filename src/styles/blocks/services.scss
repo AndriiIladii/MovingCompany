@@ -1,0 +1,44 @@
+@use "../base/vars" as *;
+
+.services__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services__item {
+  background-color: #f7e5a3;
+  border-bottom: 1px solid #e7d17e;
+  border-right: 1px solid #e7d17e;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 40px 40px 28px;
+  transition: scale 0.3s ease-in-out;
+  width: 25%;
+
+  @media screen and (max-width: $breakpoint__ml) {
+    width: 50%;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.8px;
+    margin: 0;
+    padding-left: 12px;
+  }
+
+  &:hover {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0 24px 88px -8px #42557a33;
+    scale: 1.04;
+    transition: scale 0.1s ease-in-out;
+    z-index: 2;
+  }
+}
+
+.services__item--image {
+  margin-bottom: 24px;
+}

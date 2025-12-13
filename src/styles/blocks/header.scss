@@ -1,0 +1,17 @@
+header {
+  .header__languageSwitcher {
+    &--image {
+      border: 1px solid #e6e3de;
+      border-radius: 50px;
+      height: 20px;
+      margin-right: 0.5rem;
+      width: 20px;
+    }
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
