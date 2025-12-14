@@ -1,1 +1,0 @@
-import"../styles/main.scss";import"../styles/main.scss";const swiper=new Swiper(".swiper",{direction:"horizontal",loop:!0,slidesPerView:3,centeredSlides:!0,spaceBetween:90,loopedSlides:6,roundLengths:!0,observer:!0,observeParents:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
