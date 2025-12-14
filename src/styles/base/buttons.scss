@@ -22,4 +22,8 @@
     outline-color: #2a2a2a;
     outline-width: 2px;
   }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    width: 100%;
+  }
 }

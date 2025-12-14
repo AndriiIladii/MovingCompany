@@ -1,3 +1,5 @@
+@use "../base/vars" as *;
+
 .pricing {
   background-color: #fff;
   padding: 40px 0 80px;
@@ -60,13 +62,17 @@
   color: #888;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 15;
+  margin-bottom: 10px;
 }
 
 .pricing__service-name {
   font-size: 22px;
   font-weight: 500;
   margin: 0;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    font-size: 20px;
+  }
 }
 
 .pricing__service-subtext {
@@ -80,6 +86,9 @@
   line-height: 1.2;
 
   p {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
     margin: 0;
   }
 }

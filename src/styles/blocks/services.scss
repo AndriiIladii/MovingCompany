@@ -22,7 +22,7 @@
   }
 
   p {
-    font-size: 18px;
+    font-size: clamp(0.875rem, 0.785rem + 0.38vw, 1.125rem);
     font-weight: 500;
     line-height: 19.8px;
     margin: 0;

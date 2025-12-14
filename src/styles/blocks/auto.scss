@@ -1,3 +1,5 @@
+@use "../base/vars" as *;
+
 .auto {
   background-color: #84c5bf;
   background-image: url("../../assets/auto/cells.svg");
@@ -23,19 +25,45 @@
     justify-content: space-between;
     padding: 24px 12px;
 
+    @media screen and (max-width: $breakpoint__s) {
+      padding: 24px 0;
+    }
+
+    @media screen and (max-width: $breakpoint__xl) {
+      justify-content: center;
+    }
+
+    &--numbers {
+      @media screen and (max-width: $breakpoint__ml) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
     &--numbers,
     &--weight {
       background-color: #222224;
       border-radius: 12px;
       display: flex;
       align-items: center;
-      height: 85px;
       padding: 8px 12px;
     }
 
     &--image {
       justify-content: center;
       padding: 0 24px;
+
+      img {
+        @media screen and (max-width: $breakpoint__ml) {
+          display: none;
+        }
+      }
+    }
+
+    &--weight {
+      @media screen and (max-width: $breakpoint__xl) {
+        display: none;
+      }
     }
 
     span {
@@ -54,6 +82,26 @@
 
     div {
       padding: 8px 12px;
+
+      @media screen and (max-width: $breakpoint__l) {
+        padding: 8px 8px;
+      }
+
+      @media screen and (max-width: $breakpoint__ml) {
+        column-gap: 10px;
+      }
+
+      @media screen and (max-width: $breakpoint__s) {
+        padding: 8px 4px;
+      }
     }
+  }
+}
+
+.showMobile {
+  display: none;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    display: block;
   }
 }
