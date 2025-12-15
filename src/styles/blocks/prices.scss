@@ -84,12 +84,20 @@
 .pricing__price {
   text-align: right;
   line-height: 1.2;
+}
 
+.pricing__price--info {
   p {
     display: flex;
     column-gap: 10px;
     align-items: center;
     margin: 0;
+  }
+
+  .pricing__price--km {
+    @media screen and (max-width: $breakpoint__s) {
+      display: block;
+    }
   }
 }
 
@@ -115,4 +123,43 @@
   font-size: 12px;
   color: #8c8c8c;
   margin-top: 5px;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 10;
+
+    @media screen and (max-width: $breakpoint__xll) {
+      left: -250%;
+    }
+
+    @media screen and (max-width: $breakpoint__xl) {
+      left: -350%;
+    }
+  }
+
+  &:hover::after,
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
