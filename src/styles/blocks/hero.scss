@@ -1,6 +1,10 @@
 @use "../base/vars" as *;
 
 .hero {
+  background-color: #1f3a5f;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
+    radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
+  color: #fff;
   &__wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -74,17 +78,35 @@
       transition: outline-width 0.3s ease-in-out, outline-color 0.3s ease-in-out,
         background-color 0.3s ease-in-out;
 
+      svg {
+        path {
+          transition: fill 0.3s ease-in-out;
+        }
+      }
+
       &:hover {
         background-color: #f5f4f2;
+        color: #000;
+
+        svg path {
+          fill: #000;
+        }
       }
 
       @media screen and (max-width: $breakpoint__l) {
-        background-color: #f5f4f2;
+        background-color: #ff8c00;
       }
 
       @media screen and (max-width: $breakpoint__ms) {
         gap: 7px;
         width: 50%;
+      }
+
+      svg {
+        &:hover {
+          filter: invert(0%) sepia(4%) saturate(7500%) hue-rotate(313deg)
+            brightness(109%) contrast(101%);
+        }
       }
     }
 
