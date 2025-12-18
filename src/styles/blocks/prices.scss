@@ -81,6 +81,10 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
+
+  &.main {
+    color: red;
+  }
 }
 
 .pricing__service-name {
@@ -175,7 +179,7 @@
     }
 
     @media screen and (max-width: $breakpoint__xl) {
-      left: -390%;
+      left: -425%;
     }
 
     @media screen and (max-width: $breakpoint__xs) {

@@ -1,10 +1,6 @@
 @use "../base/vars" as *;
 
 .hero {
-  background-color: #1f3a5f;
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
-    radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
-  color: #fff;
   &__wrapper {
     display: flex;
     flex-wrap: nowrap;
@@ -30,6 +26,16 @@
       @media screen and (max-width: $breakpoint__ms) {
         font-size: 35px;
         line-height: 36px;
+      }
+
+      @media screen and (max-width: $breakpoint__s) {
+        font-size: 32px;
+        line-height: 32px;
+      }
+
+      @media screen and (max-width: $breakpoint__xs) {
+        font-size: 28px;
+        line-height: 28px;
       }
     }
   }
