@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === "development";
 
 module.exports = {
-  // 🔥 1. ДОБАВЛЕНО: Включаем Source Maps для Webpack
   devtool: isDev ? "source-map" : false,
 
   entry: "./src/scripts/main.js",
@@ -33,7 +32,7 @@ module.exports = {
         test: /\.html$/,
         use: ["html-loader"],
       },
-      // Правило для изображений (остается неизменным)
+
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
@@ -41,7 +40,7 @@ module.exports = {
           filename: "assets/[name].[ext]",
         },
       },
-      // 🔥 2. ОБНОВЛЕНО: Правило для SCSS/SASS с Source Maps
+
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -49,14 +48,14 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              sourceMap: true, // Включено
+              sourceMap: true,
             },
           },
           "resolve-url-loader",
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true, // Включено
+              sourceMap: true,
             },
           },
         ],
