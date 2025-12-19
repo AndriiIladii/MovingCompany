@@ -1,3 +1,5 @@
+@use "../base/vars" as *;
+
 .footer {
   background-color: #1f3a5f;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
@@ -5,16 +7,45 @@
   color: #fff;
   padding: 40px 0;
 
+  @media screen and (max-width: $breakpoint__ms) {
+    padding: 20px 0;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: $breakpoint__ms) {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
   }
 
   &__links {
+    @media screen and (max-width: $breakpoint__l) {
+      gap: 15px;
+    }
+
+    @media screen and (max-width: $breakpoint__s) {
+      flex-direction: column;
+    }
+
     &--wrapper {
       display: flex;
-      column-gap: 20px;
+      gap: 20px;
+
+      @media screen and (max-width: $breakpoint__l) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__link {
+    width: auto;
+
+    @media screen and (max-width: $breakpoint__s) {
+      justify-content: center;
     }
   }
 }

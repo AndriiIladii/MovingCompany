@@ -1,5 +1,6 @@
 import "../styles/main.scss";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
@@ -45,7 +46,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
-const CHAT_ID = "552926535";
+const CHAT_ID = "-5059325929";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 document
@@ -54,18 +55,18 @@ document
     e.preventDefault();
 
     const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
     const addressFrom = document.getElementById("addressFrom").value;
     const addressTo = document.getElementById("addressTo").value;
-    const time = document.getElementById("time").value;
-    const date = document.getElementById("date").value;
+    const rawDateTime = document.getElementById("dateTime").value;
+    const dateTimeFormatted = rawDateTime.replace("T", " ");
+
     let message = `<b>Новая заявка на переезд! 🚚</b>\n`;
     message += `<b>Имя:</b> ${name}\n`;
-    message += `<b>Email:</b> ${email}\n`;
+    message += `<b>Телефон:</b> ${phone}\n`;
     message += `<b>Откуда:</b> ${addressFrom}\n`;
     message += `<b>Куда:</b> ${addressTo}\n`;
-    message += `<b>Время:</b> ${time}\n`;
-    message += `<b>Дата:</b> ${date}`;
+    message += `<b>Дата и время:</b> ${dateTimeFormatted}`;
 
     axios
       .post(URI_API, {
@@ -74,12 +75,25 @@ document
         text: message,
       })
       .then((res) => {
-        alert("Спасибо! Заявка отправлена.");
+        Swal.fire({
+          title: "Спасибо!",
+          text: "Ваша заявка успешно отправлена.",
+          icon: "success",
+          confirmButtonText: "Отлично",
+          confirmButtonColor: "#f97316",
+        });
         this.reset();
+        document.getElementById("dateTime").type = "text";
       })
       .catch((err) => {
         console.warn(err);
-        alert("Ошибка отправки. Попробуйте позже.");
+        Swal.fire({
+          title: "Ошибка!",
+          text: "Не удалось отправить заявку. Попробуйте позже.",
+          icon: "error",
+          confirmButtonText: "Закрыть",
+          confirmButtonColor: "#d33",
+        });
       })
       .finally(() => {
         console.log("Конец запроса");

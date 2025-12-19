@@ -1,119 +1,124 @@
-input {
-  appearance: none;
-  border-radius: 0;
-}
-
-.card {
-  margin: 2rem auto;
+.leadForm {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 425px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
-  padding: 0.75rem;
-}
+  padding: 40px 0;
 
-.card-image {
-  border-radius: 8px;
-  overflow: hidden;
-  padding-bottom: 65%;
-  background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
-  background-repeat: no-repeat;
-  background-size: 150%;
-  background-position: 0 5%;
-  position: relative;
-}
+  &__card {
+    width: 100%;
+    max-width: 480px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
-.card-heading {
-  position: absolute;
-  left: 10%;
-  top: 15%;
-  right: 10%;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #735400;
-  line-height: 1.222;
-  small {
-    display: block;
-    font-size: 0.75em;
-    font-weight: 400;
-    margin-top: 0.25em;
-  }
-}
+    &--header {
+      background-color: #f3f4f6;
+      padding: 20px 24px;
+      border-bottom: 1px solid #e5e7eb;
+    }
 
-.card-form {
-  padding: 2rem 1rem 0;
-}
+    &--title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+      color: #1f2937;
 
-.input {
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  padding-top: 1.5rem;
-  & + .input {
-    margin-top: 1.5rem;
-  }
-}
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
+      }
+    }
 
-.input-label {
-  color: #8597a3;
-  position: absolute;
-  top: 1.5rem;
-  transition: 0.25s ease;
-}
+    &--subtitle {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #6b7280;
+      padding-left: 34px;
+    }
 
-.input-label-noChange {
-  color: #6658d3;
-}
-
-.input-field {
-  border: 0;
-  z-index: 1;
-  background-color: transparent;
-  border-bottom: 2px solid #eee;
-  font: inherit;
-  font-size: 1.125rem;
-  padding: 0.25rem 0;
-  &:focus,
-  &:valid {
-    outline: 0;
-    border-bottom-color: #6658d3;
-    & + .input-label {
-      color: #6658d3;
-      transform: translateY(-1.5rem);
+    &--form {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
     }
   }
 }
 
-.action {
-  margin-top: 2rem;
-}
+.input {
+  &-group {
+    position: relative;
+    width: 100%;
+  }
 
-.action-button {
-  font: inherit;
-  font-size: 1.25rem;
-  padding: 1em;
-  width: 100%;
-  font-weight: 500;
-  background-color: #6658d3;
-  border-radius: 6px;
-  color: #fff;
-  border: 0;
-  &:focus {
-    outline: 0;
+  &-icon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  &-field {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px 0 42px;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #111;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
+    line-height: 46px;
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #1f3a5f;
+    }
+  }
+
+  &-hint {
+    font-size: 0.75rem;
+    color: #1f3a5f;
+    margin-top: 4px;
+    margin-left: 2px;
   }
 }
 
-.card-info {
-  padding: 1rem 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  color: #8597a3;
-  a {
-    display: block;
-    color: #6658d3;
-    text-decoration: none;
+.date-row {
+  display: flex;
+  gap: 10px;
+}
+
+.action {
+  margin-top: 10px;
+
+  &-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #f97316;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #ea580c;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
   }
 }

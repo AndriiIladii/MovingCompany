@@ -1,6 +1,9 @@
 .statistic {
   padding: 48px 0;
-  background-color: #b9d9c2;
+  background-color: #1f3a5f;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
+    radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
+  color: #fff;
 
   &__wrapper {
     display: flex;
