@@ -114,3 +114,11 @@
     display: none;
   }
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

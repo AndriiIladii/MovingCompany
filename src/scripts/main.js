@@ -5,8 +5,10 @@ import Swal from "sweetalert2";
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
-
-  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   centeredSlides: true,
   roundLengths: true,
   observer: true,
