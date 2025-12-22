@@ -22,30 +22,22 @@
     }
   }
 
-  &__links {
-    @media screen and (max-width: $breakpoint__l) {
-      gap: 15px;
-    }
-
-    @media screen and (max-width: $breakpoint__s) {
-      flex-direction: column;
-    }
-
-    &--wrapper {
-      display: flex;
-      gap: 20px;
-
-      @media screen and (max-width: $breakpoint__l) {
-        flex-direction: column;
-      }
+  &__link {
+    @media screen and (max-width: $breakpoint__ms) {
+      width: 100%;
+      justify-content: center;
     }
   }
 
-  &__link {
-    width: auto;
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
 
-    @media screen and (max-width: $breakpoint__s) {
-      justify-content: center;
+    &--links {
+      display: flex;
+      column-gap: 5px;
     }
   }
 }

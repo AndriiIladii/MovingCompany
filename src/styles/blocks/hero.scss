@@ -7,13 +7,10 @@
     gap: 40px;
     justify-content: space-between;
 
-    @media screen and (max-width: $breakpoint__ms) {
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    @media screen and (max-width: $breakpoint__s) {
-      gap: 10px;
+    @media screen and (max-width: $breakpoint__xl) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
   }
 
@@ -22,6 +19,10 @@
       font-size: clamp(2.75rem, 2.123rem + 2.64vw, 4.5rem);
       font-weight: 400;
       line-height: 65px;
+
+      @media screen and (max-width: $breakpoint__xl) {
+        text-align: center;
+      }
 
       @media screen and (max-width: $breakpoint__ms) {
         font-size: 35px;
@@ -43,8 +44,13 @@
   &__contacts {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 15px;
     padding: 8px 0;
+
+    @media screen and (max-width: $breakpoint__xl) {
+      align-items: center;
+    }
 
     @media screen and (max-width: $breakpoint__l) {
       gap: 35px;
@@ -119,6 +125,10 @@
     &--order {
       display: flex;
       justify-content: end;
+
+      @media screen and (max-width: $breakpoint__xl) {
+        justify-content: center;
+      }
 
       span {
         font-size: clamp(1.125rem, 1.08rem + 0.19vw, 1.25rem);

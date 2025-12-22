@@ -101,3 +101,27 @@ document
         console.log("Конец запроса");
       });
   });
+
+const selectedLang = document.getElementById("selectedLang");
+const languageList = document.getElementById("languageList");
+const listItems = languageList.querySelectorAll("a");
+
+listItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const langCode = this.getAttribute("data-value");
+    const langText = this.textContent;
+
+    selectedLang.textContent = langText;
+
+    selectedLang.className = "header__selectedLanguage";
+    if (langCode !== "pl") {
+      selectedLang.classList.add(langCode);
+    }
+
+    languageList.style.display = "none";
+
+    setTimeout(() => {
+      languageList.style.display = "";
+    }, 50);
+  });
+});

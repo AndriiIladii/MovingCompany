@@ -48,9 +48,9 @@ header {
 
   a {
     cursor: pointer;
-    white-space: nowrap;
+    width: 150px;
     display: block;
-    padding: 5px 10px;
+    padding: 10px;
 
     &:hover {
       background-color: #436696;
@@ -59,11 +59,15 @@ header {
     &::before {
       content: "";
       display: inline-block;
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       vertical-align: middle;
       margin-right: 7px;
-      border-radius: 50%;
+      background-image: url(../../assets/header/pl.png);
+      background-repeat: no-repeat;
+    }
+
+    &.pl::before {
       background-image: url(../../assets/header/pl.png);
     }
 
@@ -73,7 +77,6 @@ header {
     &.ru::before {
       background-image: url(../../assets/header/ru.png);
     }
-
     &.en::before {
       background-image: url(../../assets/header/us.png);
     }
@@ -83,15 +86,29 @@ header {
 .header__selectedLanguage {
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
-  width: 50px;
+  justify-content: flex-end;
+  width: 140px;
+  column-gap: 10px;
 
   &::before {
     content: "";
     display: block;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    background-image: url(../../assets/header/poland_flag.svg);
+    background-image: url(../../assets/header/pl.png);
+    background-repeat: no-repeat;
+  }
+
+  &.pl::before {
+    background-image: url(../../assets/header/pl.png);
+  }
+  &.ua::before {
+    background-image: url(../../assets/header/ua.png);
+  }
+  &.ru::before {
+    background-image: url(../../assets/header/ru.png);
+  }
+  &.en::before {
+    background-image: url(../../assets/header/us.png);
   }
 }
