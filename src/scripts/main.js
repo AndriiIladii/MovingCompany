@@ -47,6 +47,37 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+const reviewsSwiper = new Swiper(".reviews-slider", {
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  // === МОБИЛЬНАЯ ВЕРСИЯ (по умолчанию) ===
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  pagination: {
+    el: ".reviews-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    // Планшеты (от 768px)
+    768: {
+      slidesPerView: 2,
+      centeredSlides: false, // На планшетах обычно удобнее от левого края
+    },
+    // ПК (от 1024px)
+    1024: {
+      slidesPerView: 3, // Показываем 3 карточки
+      centeredSlides: true, // Центральная - главная
+      spaceBetween: 30, // Чуть больше воздуха между карточками
+    },
+  },
+});
+
 const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
 const CHAT_ID = "-5059325929";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
