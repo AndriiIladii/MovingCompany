@@ -3,12 +3,12 @@
 .btn__order {
   color: #fff;
   align-items: center;
-  background-color: #151515;
+  background-color: #ff8c00;
   border: none;
   border-radius: 12px;
   cursor: pointer;
   display: flex;
-  gap: 15px;
+  gap: 8px;
   justify-content: center;
   outline-color: #0000;
   outline-style: solid;
@@ -18,8 +18,17 @@
     background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: #2a2a2a;
     outline-color: #2a2a2a;
     outline-width: 2px;
+    background-color: #f5f4f2;
+    color: #000;
+
+    svg path {
+      fill: #000;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    width: 100%;
   }
 }

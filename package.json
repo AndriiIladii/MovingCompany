@@ -1,14 +1,18 @@
 {
+  "homepage": "https://andriiiladii.github.io/MovingCompany/",
   "name": "JsTemplate",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack serve --mode=development"
+    "dev": "webpack serve --mode=development",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.4",
@@ -19,7 +23,9 @@
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
+    "axios": "^1.13.2",
     "sass": "^1.89.2",
-    "sass-loader": "^16.0.5"
+    "sass-loader": "^16.0.5",
+    "sweetalert2": "^11.26.10"
   }
 }

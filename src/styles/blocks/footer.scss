@@ -1,0 +1,43 @@
+@use "../base/vars" as *;
+
+.footer {
+  background-color: #1f3a5f;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
+    radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
+  color: #fff;
+  padding: 40px 0;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    padding: 20px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $breakpoint__ms) {
+      flex-direction: column-reverse;
+      row-gap: 30px;
+    }
+  }
+
+  &__link {
+    @media screen and (max-width: $breakpoint__ms) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-top: 15px;
+
+    &--links {
+      display: flex;
+      column-gap: 5px;
+    }
+  }
+}

@@ -1,6 +1,12 @@
+@use "../base/vars" as *;
+
 .pricing {
   background-color: #fff;
   padding: 40px 0 80px;
+
+  @media screen and (max-width: $breakpoint__xs) {
+    padding: 40px 0;
+  }
 }
 
 .pricing__header {
@@ -11,6 +17,10 @@
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 40px;
+
+    @media screen and (max-width: $breakpoint__xs) {
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -43,6 +53,12 @@
   padding: 20px 0;
   border-bottom: 1px solid #ccc;
 
+  @media screen and (max-width: $breakpoint__xs) {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 10px;
+  }
+
   &--individual {
     border-bottom: none;
     padding-bottom: 0;
@@ -52,6 +68,10 @@
 .pricing__details {
   flex-grow: 1;
   padding-right: 20px;
+
+  @media screen and (max-width: $breakpoint__xs) {
+    padding: 0;
+  }
 }
 
 .pricing__min-order {
@@ -60,13 +80,21 @@
   color: #888;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  margin-bottom: 15;
+  margin-bottom: 10px;
+
+  &.main {
+    color: red;
+  }
 }
 
 .pricing__service-name {
   font-size: 22px;
   font-weight: 500;
   margin: 0;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    font-size: 20px;
+  }
 }
 
 .pricing__service-subtext {
@@ -78,9 +106,20 @@
 .pricing__price {
   text-align: right;
   line-height: 1.2;
+}
 
+.pricing__price--info {
   p {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
     margin: 0;
+  }
+
+  .pricing__price--km {
+    @media screen and (max-width: $breakpoint__s) {
+      display: block;
+    }
   }
 }
 
@@ -89,6 +128,10 @@
   font-size: 20px;
   font-weight: 500;
   white-space: nowrap;
+
+  @media screen and (max-width: $breakpoint__xs) {
+    margin-bottom: 5px;
+  }
 }
 
 .pricing__price--min {
@@ -106,4 +149,47 @@
   font-size: 12px;
   color: #8c8c8c;
   margin-top: 5px;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 10;
+
+    @media screen and (max-width: $breakpoint__xll) {
+      left: -250%;
+    }
+
+    @media screen and (max-width: $breakpoint__xl) {
+      left: -425%;
+    }
+
+    @media screen and (max-width: $breakpoint__xs) {
+      left: 50%;
+    }
+  }
+
+  &:hover::after,
+  &:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
