@@ -40,4 +40,29 @@
       column-gap: 5px;
     }
   }
+
+  &__email {
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.footer__links--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media screen and (max-width: $breakpoint__ms) {
+    align-items: center;
+  }
+}
+
+.footer__link {
+  padding: 8px 0;
+
+  @media screen and (max-width: $breakpoint__l) {
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
 }

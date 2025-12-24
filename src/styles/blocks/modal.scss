@@ -1,0 +1,141 @@
+@use "../base/vars" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__container {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px; // Ширина как на макете
+    border-radius: 16px;
+    padding: 60px 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    margin: 20px; // Отступ на мобильных
+  }
+
+  // Анимация всплывания
+  &.active &__container {
+    transform: translateY(0);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+
+    @media screen and (max-width: $breakpoint__s) {
+      top: 0;
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 1.231rem + 1.13vw, 2.25rem);
+    font-weight: 700;
+    color: #1a2b45;
+    margin-bottom: 25px;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4b5563;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $breakpoint__ms) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media screen and (max-width: $breakpoint__ml) {
+      justify-content: space-around;
+    }
+  }
+
+  &__action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1a2b45;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 10px;
+    transition: transform 0.2s;
+    width: 120px;
+
+    &:hover {
+      transform: scale(1.05);
+      color: #3390ec;
+    }
+
+    &.whatsapp {
+      &:hover {
+        color: #25d366;
+      }
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .modal__container {
+    padding: 30px 20px;
+  }
+}

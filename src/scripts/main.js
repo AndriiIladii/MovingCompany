@@ -51,10 +51,9 @@ const reviewsSwiper = new Swiper(".reviews-slider", {
   loop: true,
   centeredSlides: true,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
-  // === МОБИЛЬНАЯ ВЕРСИЯ (по умолчанию) ===
   slidesPerView: 1,
   spaceBetween: 20,
 
@@ -64,16 +63,15 @@ const reviewsSwiper = new Swiper(".reviews-slider", {
   },
 
   breakpoints: {
-    // Планшеты (от 768px)
     768: {
       slidesPerView: 2,
-      centeredSlides: false, // На планшетах обычно удобнее от левого края
+      centeredSlides: false,
     },
-    // ПК (от 1024px)
+
     1024: {
-      slidesPerView: 3, // Показываем 3 карточки
-      centeredSlides: true, // Центральная - главная
-      spaceBetween: 30, // Чуть больше воздуха между карточками
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 30,
     },
   },
 });
@@ -145,7 +143,7 @@ listItems.forEach((item) => {
     selectedLang.textContent = langText;
 
     selectedLang.className = "header__selectedLanguage";
-    if (langCode !== "pl") {
+    if (langCode !== "ru") {
       selectedLang.classList.add(langCode);
     }
 
@@ -154,5 +152,85 @@ listItems.forEach((item) => {
     setTimeout(() => {
       languageList.style.display = "";
     }, 50);
+  });
+});
+
+const servicesData = {
+  apartment: {
+    title: "Квартирные переезды",
+    text: "Выполняем погрузку, транспортировку и разгрузку мебели и личных вещей. При необходимости помогаем с разборкой, сборкой и упаковкой для безопасной транспортировки.Работаем аккуратно и обеспечиваем надёжную доставку на новый адрес.",
+  },
+  office: {
+    title: "Переезды офисов и бизнесов",
+    text: "Выполняем офисные переезды с погрузкой, транспортировкой и разгрузкой мебели, оборудования и документов. При необходимости осуществляем демонтаж и монтаж мебели.Бережно относимся к офисной технике и работаем оперативно, минимизируя простой бизнеса.",
+  },
+  delivery: {
+    title: "Доставка покупок",
+    text: "Выполняем доставку покупок из магазинов, включая мебель, бытовую технику и другие крупногабаритные товары. При необходимости помогаем с погрузкой и разгрузкой. Гарантируем аккуратную доставку ваших покупок по указанному адресу.",
+  },
+  materials: {
+    title: "Доставка стройматериалов",
+    text: "Перевозка смесей, гипсокартона, плитки и других стройматериалов. Наш транспорт подходит для тяжелых грузов. Возможен заказ грузчиков для подъема материалов на этаж.",
+  },
+  cleaning: {
+    title: "Клининг",
+    text: "Предоставляем клининговые услуги для квартир, домов, офисов и коммерческих помещений. Выполняем разовую и регулярную уборку с использованием профессионального оборудования и эффективных средств. Наши специалисты работают аккуратно, соблюдают стандарты чистоты и гарантируют порядок и комфорт в каждом помещении.",
+  },
+  fragile: {
+    title: "Хрупкие грузы",
+    text: "Выполняем перевозку хрупких вещей и грузов с повышенными требованиями к сохранности. Используем надёжную упаковку, аккуратную погрузку и фиксацию груза в автомобиле.Обеспечиваем бережную транспортировку и доставку в целости и сохранности.",
+  },
+  special: {
+    title: "Перевозка спец. грузов",
+    text: "Выполняем перевозку нестандартных и сложных грузов: крупногабаритного оборудования, тяжёлых конструкций, промышленных станков, а также роялей и пианино, требующих особой аккуратности.",
+  },
+  transfer: {
+    title: "Трансфер и поездки",
+    text: "Выполняем пассажирские перевозки с комфортом и соблюдением всех требований безопасности. Обеспечиваем трансферы, поездки по городу и междугородние маршруты для частных лиц и организаций.Мы используем современный транспорт в безупречном техническом состоянии, управляемый опытными и ответственными водителями.",
+  },
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("serviceModal");
+  const modalTitle = modal.querySelector(".modal__title");
+  const modalText = modal.querySelector(".modal__description");
+  const closeBtn = modal.querySelector(".modal__close");
+  const overlay = modal.querySelector(".modal__overlay");
+  const serviceItems = document.querySelectorAll(".services__item");
+  const closeLinks = modal.querySelectorAll(".js-close-modal");
+
+  function openModal(serviceType) {
+    const data = servicesData[serviceType];
+    if (data) {
+      modalTitle.textContent = data.title;
+      modalText.textContent = data.text;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  serviceItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      const serviceType = item.getAttribute("data-service");
+      openModal(serviceType);
+    });
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  overlay.addEventListener("click", closeModal);
+
+  closeLinks.forEach((link) => {
+    link.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
   });
 });
