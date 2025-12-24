@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NS4CG92V");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -28,6 +42,16 @@
     <title>Vitolio Transport | Moving Company</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NS4CG92V"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
       <div class="container">
         <div class="header__wrapper">
@@ -37,23 +61,23 @@
           <div class="header__languageSelect">
             <div
               class="header__selectedLanguage"
-              data-value="pl"
+              data-value="ru"
               id="selectedLang"
             >
-              Polski
+              Русский
             </div>
             <ul id="languageList">
               <li>
-                <a class="ua" data-value="ua"> Українська</a>
+                <a class="ua" data-value="ua">Українська</a>
               </li>
               <li>
                 <a class="en" data-value="en">English</a>
               </li>
               <li>
-                <a class="ru" data-value="ru">Русский</a>
+                <a class="pl" data-value="pl">Polska</a>
               </li>
               <li>
-                <a class="pl" data-value="pl">Polski</a>
+                <a class="ru" data-value="ru">Русский</a>
               </li>
             </ul>
           </div>
@@ -64,8 +88,8 @@
           <div class="hero__wrapper">
             <div class="hero__title">
               <h1>
-                Оптимальная цена<br />
-                Качество. Под ключ.
+                Оптимально.<br />
+                Профессионально. Надёжно.
               </h1>
             </div>
 
@@ -168,7 +192,7 @@
     <main>
       <section class="services">
         <div class="services__items">
-          <div class="services__item">
+          <div class="services__item" data-service="apartment">
             <div class="services__item--image">
               <img
                 src="./assets/services/apartment.png"
@@ -182,7 +206,7 @@
               переезды
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="office">
             <div class="services__item--image">
               <img
                 src="./assets/services/desk.png"
@@ -196,7 +220,7 @@
               переезды
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="delivery">
             <div class="services__item--image">
               <img
                 src="./assets/services/shopping-cart.png"
@@ -210,7 +234,7 @@
               покупок
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="materials">
             <div class="services__item--image">
               <img
                 src="./assets/services/brick.png"
@@ -224,7 +248,7 @@
               стройматериалов
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="cleaning">
             <div class="services__item--image top">
               <img
                 src="./assets/services/clean.png"
@@ -235,7 +259,7 @@
             </div>
             <p>Клининг</p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="fragile">
             <div class="services__item--image">
               <img
                 src="./assets/services/mirror.png"
@@ -249,7 +273,7 @@
               грузы
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="special">
             <div class="services__item--image">
               <img
                 src="./assets/services/piano.png"
@@ -263,7 +287,7 @@
               спец. грузов
             </p>
           </div>
-          <div class="services__item">
+          <div class="services__item" data-service="transfer">
             <div class="services__item--image">
               <img
                 src="./assets/services/travel.png"
@@ -484,26 +508,26 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--red">
-                      P
+                      А
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Piotr Kowalski</div>
-                      <div class="review-card__date">2 tygodnie temu</div>
+                      <div class="review-card__name">Александр Белов</div>
+                      <div class="review-card__date">2 недели назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/poland.png" alt="" />
+                      <img src="./assets/header/russia.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Bardzo profesjonalna ekipa. Przyjechali idealnie o czasie,
-                    co było dla mnie kluczowe. Wszystkie meble zostały starannie
-                    zabezpieczone folią i kocami, dzięki czemu nic się nie
-                    porysowało w transporcie. Panowie pracowali szybko, ale bez
-                    pośpiechu. Zdecydowanie polecam każdemu, kto szuka solidnej
-                    firmy w Warszawie!
+                    Заказывали комплексный переезд квартиры и остались в
+                    восторге. Фирма заранее доставила нам коробки, что очень
+                    упростило сборы. Особенно переживала за стеклянный стол и
+                    зеркала, но все доехало в целости и сохранности. Полный
+                    профессионализм и высокая культура общения сотрудников.
+                    Спасибо за день без стресса!
                   </p>
                 </div>
               </div>
@@ -512,26 +536,26 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      A
+                      И
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Anna Nowak</div>
-                      <div class="review-card__date">1 miesiąc temu</div>
+                      <div class="review-card__name">Ирина Кравченко</div>
+                      <div class="review-card__date">1 месяц назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/poland.png" alt="" />
+                      <img src="./assets/header/ukraine.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Zamawialiśmy kompleksową przeprowadzkę mieszkania i jesteśmy
-                    zachwyceni. Firma dostarczyła nam wcześniej kartony, co
-                    bardzo ułatwiło pakowanie. Szczególnie obawiałam się o
-                    szklany stół i lustra, ale wszystko dotarło w jednym
-                    kawałku. Pełen profesjonalizm i wysoka kultura osobista
-                    pracowników. Dziękujemy za bezstresowy dzień!
+                    Очень профессиональная бригада. Приехали идеально вовремя,
+                    что для меня было ключевым моментом. Все мебель была
+                    тщательно упакована в пленку и одеяла, благодаря чему ничего
+                    не поцарапалось при транспортировке. Парни работали быстро,
+                    но без суеты. Однозначно рекомендую всем, кто ищет надежную
+                    фирму в Варшаве!
                   </p>
                 </div>
               </div>
@@ -540,26 +564,25 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      M
+                      С
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Michael Turner</div>
-                      <div class="review-card__date">3 weeks ago</div>
+                      <div class="review-card__name">Сергей Орлов</div>
+                      <div class="review-card__date">3 недели назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/united-kingdom.png" alt="" />
+                      <img src="./assets/header/russia.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Absolutely fantastic moving service! The team arrived
-                    exactly on time and handled all my belongings with extreme
-                    care. They were very efficient with loading and unloading,
-                    even with the heavy boxes. Communication was excellent
-                    throughout the process, and the price was very reasonable.
-                    Highly recommended!
+                    Фантастический сервис! Команда прибыла точно в срок и
+                    обращалась с моими вещами предельно аккуратно. Очень
+                    эффективно справились с погрузкой и разгрузкой, даже с
+                    тяжелыми коробками. Коммуникация была отличной на протяжении
+                    всего процесса, а цена — очень разумной. Горячо рекомендую!
                   </p>
                 </div>
               </div>
@@ -568,26 +591,25 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--red">
-                      K
+                      Н
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Kasia Wójcik</div>
-                      <div class="review-card__date">1 tydzień temu</div>
+                      <div class="review-card__name">Наталья Бондарь</div>
+                      <div class="review-card__date">1 неделя назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/poland.png" alt="" />
+                      <img src="./assets/header/ukraine.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Szybko, tanio i niesamowicie solidnie. Panowie uwinęli się z
-                    całą przeprowadzką kawalerki w zaledwie 3 godziny. Byli
-                    bardzo uprzejmi i pomocni przy ustawianiu mebli w nowym
-                    miejscu. Żadnych ukrytych kosztów na koniec, wszystko
-                    zgodnie z wcześniejszą wyceną telefoniczną. Na pewno
-                    skorzystam ponownie!
+                    Быстро, недорого и невероятно надежно. Ребята справились с
+                    переездом квартиры-студии всего за 3 часа. Были очень
+                    вежливы и помогли расставить мебель на новом месте. Никаких
+                    скрытых доплат в конце, все согласно предварительной оценке
+                    по телефону. Обязательно воспользуюсь снова!
                   </p>
                 </div>
               </div>
@@ -596,25 +618,25 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      J
+                      М
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">John Doe</div>
-                      <div class="review-card__date">5 days ago</div>
+                      <div class="review-card__name">Максим Воронин</div>
+                      <div class="review-card__date">5 дней назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/united-kingdom.png" alt="" />
+                      <img src="./assets/header/ukraine.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Great experience moving my home office. I was worried about
-                    my monitors and computer equipment, but they wrapped
-                    everything perfectly with stretch film. The crew was polite,
-                    hardworking, and didn't waste a single minute. It was the
-                    smoothest move I've ever had. Five stars!
+                    Отличный опыт переезда домашнего офиса. Я волновался за
+                    мониторы и компьютерное оборудование, но они идеально
+                    упаковали все в стрейч-пленку. Бригада была вежливой,
+                    трудолюбивой и не теряла ни минуты. Это был самый гладкий
+                    переезд в моей жизни. Пять звезд!
                   </p>
                 </div>
               </div>
@@ -623,26 +645,26 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--red">
-                      M
+                      В
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Marek Zając</div>
-                      <div class="review-card__date">2 miesiące temu</div>
+                      <div class="review-card__name">Владимир Ткачук</div>
+                      <div class="review-card__date">2 месяца назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/poland.png" alt="" />
+                      <img src="./assets/header/ukraine.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Współpraca z tą firmą to czysta przyjemność. Musieliśmy
-                    przewieźć bardzo ciężką szafę i pianino na czwarte piętro
-                    bez windy. Panowie dali radę bez najmniejszego marudzenia!
-                    Jestem pod wrażeniem ich siły i techniki. Wszystko
-                    zabezpieczone pasami, zero uszkodzeń na klatce schodowej.
-                    Super robota.
+                    Сотрудничество с этой фирмой — чистое удовольствие. Нам
+                    нужно было перевезти очень тяжелый шкаф и пианино на
+                    четвертый этаж без лифта. Парни справились без малейших
+                    жалоб! Я впечатлен их силой и техникой. Все закрепили
+                    ремнями, ноль повреждений на лестничной клетке. Супер
+                    работа.
                   </p>
                 </div>
               </div>
@@ -654,8 +676,8 @@
                       E
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Elena Ivanova</div>
-                      <div class="review-card__date">1 week ago</div>
+                      <div class="review-card__name">Елена Иванова</div>
+                      <div class="review-card__date">1 неделя назад</div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -665,11 +687,12 @@
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    Дуже дякую хлопцям за допомогу! Перевезли все дуже акуратно,
-                    навіть моє улюблене піаніно та крихкий посуд. Працювали
-                    швидко, злагоджено і з позитивним настроєм. Ціна була саме
-                    такою, як домовилися по телефону, без жодних доплат. Дуже
-                    приємно мати справу з такими професіоналами. Рекомендую!
+                    Большое спасибо ребятам за помощь! Перевезли все очень
+                    аккуратно, даже мое любимое пианино и хрупкую посуду.
+                    Работали быстро, слаженно и с позитивным настроем. Цена была
+                    именно такой, как договорились по телефону, без каких-либо
+                    доплат. Очень приятно иметь дело с такими профессионалами.
+                    Рекомендую!
                   </p>
                 </div>
               </div>
@@ -681,22 +704,22 @@
                       T
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Tomasz Mazur</div>
-                      <div class="review-card__date">3 dni temu</div>
+                      <div class="review-card__name">Тарас Мазур</div>
+                      <div class="review-card__date">3 дня назад</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/poland.png" alt="" />
+                      <img src="./assets/header/russia.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    To już moja druga przeprowadzka z Vitolio i po raz kolejny
-                    się nie zawiodłem. Usługa wykonana na najwyższym poziomie.
-                    Panowie nie tylko przewieźli rzeczy, ale też pomogli z
-                    demontażem i ponownym skręceniem dużej szafy przesuwnej.
-                    Wszystko stoi stabilnie i prosto. Pełna rekomendacja!
+                    Это уже мой второй переезд с Vitolio и в очередной раз я не
+                    разочаровался. Услуга выполнена на высшем уровне. Парни не
+                    только перевезли вещи, но и помогли с разборкой и обратной
+                    сборкой большого шкафа-купе. Все стоит стабильно и ровно.
+                    Полная рекомендация!
                   </p>
                 </div>
               </div>
@@ -705,25 +728,25 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      S
+                      С
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Sarah Smith</div>
-                      <div class="review-card__date">Yesterday</div>
+                      <div class="review-card__name">Светлана Коваленко</div>
+                      <div class="review-card__date">Вчера</div>
                     </div>
                     <div class="review-card__flag">
-                      <img src="./assets/header/united-kingdom.png" alt="" />
+                      <img src="./assets/header/ukraine.png" alt="" />
                     </div>
                   </div>
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
                   <p class="review-card__text">
-                    I needed a last-minute move and they were the only ones who
-                    could help me on such short notice. The movers were
-                    incredibly polite and careful with my fragile items. They
-                    made a stressful day feel easy and organized. I really
-                    appreciate their flexibility and hard work!
+                    Мне нужен был срочный переезд в последнюю минуту, и они
+                    единственные, кто смог помочь в такие сжатые сроки. Грузчики
+                    были невероятно вежливы и осторожны с моими хрупкими вещами.
+                    Они сделали этот стрессовый день легким и организованным.
+                    Очень ценю их гибкость и тяжелый труд!
                   </p>
                 </div>
               </div>
@@ -945,11 +968,55 @@
                 +48 736 335 283
               </a>
             </div>
+            <div class="footer__email">
+              <a href="mailto:vitollious@gmail.com ">vitollious@gmail.com</a>
+            </div>
             <div class="footer__social">
               <div>
                 <p>Наши соц.сети:</p>
               </div>
               <div class="footer__social--links">
+                <a href="tg://resolve?phone=48883711265" target="_blank">
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_1451_1703)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C20.6274 2 26 7.37258 26 14ZM10.1488 15.0179L7.22021 14.0637C7.22021 14.0637 6.87021 13.9217 6.98291 13.5997C7.00611 13.5333 7.05291 13.4768 7.19291 13.3797C7.84181 12.9274 19.2035 8.84369 19.2035 8.84369C19.2035 8.84369 19.5243 8.73559 19.7135 8.80749C19.7603 8.82198 19.8024 8.84864 19.8355 8.88475C19.8687 8.92085 19.8916 8.96511 19.902 9.01299C19.9224 9.09756 19.931 9.18456 19.9274 9.27149C19.9269 9.31756 19.9232 9.36157 19.9189 9.41388L19.9189 9.41393L19.9189 9.41403C19.9162 9.44707 19.9132 9.48342 19.9105 9.52569C19.8413 10.6422 17.7705 18.975 17.7705 18.975C17.7705 18.975 17.6466 19.4626 17.2027 19.4793C17.0936 19.4828 16.9849 19.4643 16.8831 19.425C16.7813 19.3856 16.6885 19.3261 16.6102 19.2501C16.1427 18.8479 15.0588 18.0787 14.0519 17.3836C13.7474 17.6396 13.1394 18.1655 12.5126 18.7925C11.6228 19.6825 11.7372 18.7925 11.7372 18.7925L12.0105 15.8879L12.0163 15.8913C12.0289 15.8616 12.0501 15.8374 12.0501 15.8374C12.0501 15.8374 17.2927 11.1774 17.4322 10.6882C17.443 10.6503 17.4022 10.6316 17.3474 10.6482C16.9995 10.7762 10.9741 14.5812 10.2987 15.0077L10.2968 15.0089C10.2489 15.0234 10.1982 15.0265 10.1488 15.0179Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1451_1703">
+                        <rect
+                          width="28"
+                          height="28"
+                          fill="white"
+                          transform="translate(2 2)"
+                        />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+                <a href="https://wa.me/48883711265" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 50 50"
+                    width="28"
+                    height="28"
+                  >
+                    <path
+                      fill="#ffffff"
+                      d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"
+                    />
+                  </svg>
+                </a>
                 <a
                   href="https://www.facebook.com/groups/warszawaperevozki?locale=ru_RU"
                   target="_blank"
@@ -1003,6 +1070,135 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="serviceModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__container">
+        <button class="modal__close">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+        <div class="modal__content">
+          <h3 class="modal__title"></h3>
+          <p class="modal__description"></p>
+
+          <div class="modal__actions">
+            <a href="#leadForm" class="modal__action-btn js-close-modal">
+              <div class="modal__icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.2501 21C17.1514 21.0005 17.0536 20.9816 16.9622 20.9443C16.8708 20.907 16.7877 20.852 16.7176 20.7825L12.1201 16.1775L9.62261 19.9275C9.54308 20.0493 9.42983 20.1453 9.29666 20.2039C9.1635 20.2625 9.01616 20.2811 8.87261 20.2575C8.73201 20.2365 8.60025 20.176 8.49269 20.0831C8.38514 19.9901 8.30621 19.8685 8.26511 19.7325L3.76511 4.73245C3.71163 4.59811 3.69811 4.45117 3.7262 4.30933C3.75429 4.16749 3.82278 4.03679 3.92343 3.93297C4.02407 3.82915 4.15259 3.75664 4.29349 3.72417C4.43439 3.6917 4.58168 3.70065 4.71761 3.74995L19.7176 8.24995C19.8537 8.29105 19.9753 8.36997 20.0683 8.47753C20.1612 8.58509 20.2217 8.71685 20.2426 8.85745C20.2663 9.001 20.2477 9.14833 20.1891 9.2815C20.1305 9.41467 20.0344 9.52792 19.9126 9.60745L16.1626 12.105L20.7676 16.7025C20.8379 16.7722 20.8937 16.8551 20.9318 16.9465C20.9699 17.0379 20.9895 17.1359 20.9895 17.235C20.9895 17.334 20.9699 17.432 20.9318 17.5234C20.8937 17.6148 20.8379 17.6977 20.7676 17.7675L17.7676 20.7675C17.6322 20.9097 17.4464 20.9932 17.2501 21ZM17.2501 19.1925L19.1926 17.25L13.8226 11.8875L17.7601 9.26245L5.61761 5.61745L9.26261 17.76L11.8876 13.8225L17.2501 19.1925Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </div>
+              <span>Заказать онлайн</span>
+            </a>
+
+            <a href="tel:+48573666398" class="modal__action-btn">
+              <div class="modal__icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <span>+48 573 666 398</span>
+            </a>
+            <a
+              href="https://wa.me/48883711265"
+              target="_blank"
+              class="modal__action-btn whatsapp"
+            >
+              <div class="modal__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="24"
+                  height="24"
+                  fill="none"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"
+                  />
+                </svg>
+              </div>
+              <span>WhatsApp</span>
+            </a>
+
+            <a
+              href="https://t.me/vitolio_support"
+              target="_blank"
+              class="modal__action-btn"
+            >
+              <div class="modal__icon">
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 28 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_1451_1703)">
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C20.6274 2 26 7.37258 26 14ZM10.1488 15.0179L7.22021 14.0637C7.22021 14.0637 6.87021 13.9217 6.98291 13.5997C7.00611 13.5333 7.05291 13.4768 7.19291 13.3797C7.84181 12.9274 19.2035 8.84369 19.2035 8.84369C19.2035 8.84369 19.5243 8.73559 19.7135 8.80749C19.7603 8.82198 19.8024 8.84864 19.8355 8.88475C19.8687 8.92085 19.8916 8.96511 19.902 9.01299C19.9224 9.09756 19.931 9.18456 19.9274 9.27149C19.9269 9.31756 19.9232 9.36157 19.9189 9.41388L19.9189 9.41393L19.9189 9.41403C19.9162 9.44707 19.9132 9.48342 19.9105 9.52569C19.8413 10.6422 17.7705 18.975 17.7705 18.975C17.7705 18.975 17.6466 19.4626 17.2027 19.4793C17.0936 19.4828 16.9849 19.4643 16.8831 19.425C16.7813 19.3856 16.6885 19.3261 16.6102 19.2501C16.1427 18.8479 15.0588 18.0787 14.0519 17.3836C13.7474 17.6396 13.1394 18.1655 12.5126 18.7925C11.6228 19.6825 11.7372 18.7925 11.7372 18.7925L12.0105 15.8879L12.0163 15.8913C12.0289 15.8616 12.0501 15.8374 12.0501 15.8374C12.0501 15.8374 17.2927 11.1774 17.4322 10.6882C17.443 10.6503 17.4022 10.6316 17.3474 10.6482C16.9995 10.7762 10.9741 14.5812 10.2987 15.0077L10.2968 15.0089C10.2489 15.0234 10.1982 15.0265 10.1488 15.0179Z"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1451_1703">
+                      <rect
+                        width="24"
+                        height="24"
+                        fill="none"
+                        transform="translate(2 2)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <span>Telegram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
