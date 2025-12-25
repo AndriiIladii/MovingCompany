@@ -67,15 +67,15 @@
               Русский
             </div>
             <ul id="languageList">
-              <li>
+              <!-- <li>
                 <a class="ua" data-value="ua">Українська</a>
-              </li>
+              </li> -->
               <li>
                 <a class="en" data-value="en">English</a>
               </li>
-              <li>
+              <!-- <li>
                 <a class="pl" data-value="pl">Polska</a>
-              </li>
+              </li> -->
               <li>
                 <a class="ru" data-value="ru">Русский</a>
               </li>
@@ -87,7 +87,7 @@
         <div class="container">
           <div class="hero__wrapper">
             <div class="hero__title">
-              <h1>
+              <h1 data-i18n="title">
                 Оптимально.<br />
                 Профессионально. Надёжно.
               </h1>
@@ -112,7 +112,7 @@
                         fill="white"
                       />
                     </svg>
-                    Позвонить
+                    <span data-i18n="callUs">Позвонить</span>
                   </a>
                   <a
                     class="hero__contacts--link"
@@ -180,7 +180,7 @@
                         fill="white"
                       />
                     </svg>
-                    <span>Заказать онлайн</span>
+                    <span data-i18n="onlineOrder">Заказать онлайн</span>
                   </a>
                 </div>
               </div>
@@ -201,7 +201,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="homeMoving">
               Квартирные <br />
               переезды
             </p>
@@ -215,7 +215,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="officeMoving">
               Офисные<br />
               переезды
             </p>
@@ -229,7 +229,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="storeDelivery">
               Доставка<br />
               покупок
             </p>
@@ -243,7 +243,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="constructionSupplies">
               Доставка <br />
               стройматериалов
             </p>
@@ -257,7 +257,7 @@
                 height="96"
               />
             </div>
-            <p>Клининг</p>
+            <p data-i18n="cleaning">Клининг</p>
           </div>
           <div class="services__item" data-service="fragile">
             <div class="services__item--image">
@@ -268,7 +268,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="fragileCargo">
               Хрупкие<br />
               грузы
             </p>
@@ -282,7 +282,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="specialCargo">
               Перевозка<br />
               спец. грузов
             </p>
@@ -296,7 +296,7 @@
                 height="96"
               />
             </div>
-            <p>
+            <p data-i18n="transfer">
               Трансфер и<br />
               поездки
             </p>
@@ -306,42 +306,44 @@
       <section class="auto">
         <div class="container">
           <div class="auto__wrapper">
-            <h2 class="auto__title">Габариты для грузовых перевозок</h2>
+            <h2 class="auto__title" data-i18n="dimension">
+              Габариты для грузовых перевозок
+            </h2>
             <div class="auto__image">
               <img src="./assets/auto/van.png" alt="" />
             </div>
             <div class="auto__dimensions">
               <div class="auto__dimensions--numbers">
                 <div>
-                  <span>Длина</span>
-                  <p>4,2м</p>
+                  <span data-i18n="length">Длина</span>
+                  <p>4,2 <span data-i18n="m">м</span></p>
                 </div>
                 <div class="auto__dimensions--image">
                   <img src="./assets/auto/icon.svg" alt="" />
                 </div>
                 <div>
-                  <span>Ширина</span>
-                  <p>2,4м</p>
+                  <span data-i18n="width">Ширина</span>
+                  <p>2,4 <span data-i18n="m">м</span></p>
                 </div>
                 <div class="auto__dimensions--image">
                   <img src="./assets/auto/icon.svg" alt="" />
                 </div>
                 <div>
-                  <span>Высота</span>
-                  <p>2,5м</p>
+                  <span data-i18n="height">Высота</span>
+                  <p>2,5 <span data-i18n="m">м</span></p>
                 </div>
                 <div class="auto__dimensions--image showMobile">
                   <img src="./assets/auto/icon.svg" alt="" />
                 </div>
                 <div class="showMobile">
-                  <span>Грузоподъёмность</span>
-                  <p>1500 кг</p>
+                  <span data-i18n="payload">Грузоподъёмность</span>
+                  <p>1500 <span data-i18n="kg">кг</span></p>
                 </div>
               </div>
               <div class="auto__dimensions--weight">
                 <div>
-                  <span>Грузоподьемность</span>
-                  <p>1500 кг</p>
+                  <span data-i18n="payload">Грузоподьемность</span>
+                  <p>1500 <span data-i18n="kg">кг</span></p>
                 </div>
                 <img src="./assets/auto/weight.svg" alt="" />
               </div>
@@ -352,67 +354,90 @@
       <section class="pricing">
         <div class="container">
           <div class="pricing__header">
-            <h2>Цены</h2>
-            <p>
+            <h2 data-i18n="pricesTitle">Цены</h2>
+            <p data-i18n="pricesSubtitle">
               Стоимость отдельных услуг сервиса, работа грузчиков и <br />
               подача машины
             </p>
           </div>
 
           <div class="pricing__list">
-            <span class="pricing__min-order main"
+            <span data-i18n="minOrder" class="pricing__min-order main"
               >Минимальный заказ 2 часа
             </span>
             <div class="pricing__item">
               <div class="pricing__details">
-                <p class="pricing__service-name">Подача машины</p>
-                <p class="pricing__service-subtext">(Без грузчика)</p>
+                <p class="pricing__service-name" data-i18n="arrival">
+                  Подача машины
+                </p>
+                <p class="pricing__service-subtext" data-i18n="driverOnly">
+                  (Без грузчика)
+                </p>
               </div>
               <div class="pricing__price">
-                <p class="pricing__price--hour">120 zł/час</p>
-                <p class="pricing__price--min">240 zł/2 часа</p>
+                <p class="pricing__price--hour">
+                  120 zł/<span data-i18n="hour">час</span>
+                </p>
+                <p class="pricing__price--min">
+                  240 zł/2 <span data-i18n="hours">часа</span>
+                </p>
               </div>
             </div>
 
             <div class="pricing__item">
               <div class="pricing__details">
-                <p class="pricing__service-name">Услуги грузчика</p>
+                <p class="pricing__service-name" data-i18n="moverService">
+                  Услуги грузчика
+                </p>
               </div>
               <div class="pricing__price">
-                <p class="pricing__price--hour">30 zł/час</p>
-                <p class="pricing__price--min">60 zł/2 часа</p>
+                <p class="pricing__price--hour">
+                  30 zł/<span data-i18n="hour">час</span>
+                </p>
+                <p class="pricing__price--min">
+                  60 zł/2 <span data-i18n="hours">часа</span>
+                </p>
               </div>
             </div>
 
             <div class="pricing__item">
               <div class="pricing__details">
-                <p class="pricing__service-name">
+                <p class="pricing__service-name" data-i18n="packing">
                   Упаковка + упаковочный материал
                 </p>
               </div>
               <div class="pricing__price">
-                <p class="pricing__price--hour">30 zł/час</p>
-                <p class="pricing__price--min">60 zł/2 часа</p>
+                <p class="pricing__price--hour">
+                  30 zł/<span data-i18n="hour">час</span>
+                </p>
+                <p class="pricing__price--min">
+                  60 zł/2 <span data-i18n="hours">часа</span>
+                </p>
               </div>
             </div>
 
             <div class="pricing__item pricing__item--no-min">
               <div class="pricing__details">
-                <p class="pricing__service-name">Междугородние перевозки</p>
-                <p class="pricing__service-subtext">
+                <p class="pricing__service-name" data-i18n="intercity">
+                  Междугородние перевозки
+                </p>
+                <p
+                  class="pricing__service-subtext"
+                  data-i18n="minOrderIntercity"
+                >
                   (Минимальный заказ: 350 zł или 40 км)
                 </p>
               </div>
               <div class="pricing__price pricing__price--info">
                 <p class="pricing__price--km">
-                  6 зл/км
+                  6 zł/<span data-i18n="km">км</span>
                   <span class="tooltip-wrapper" data-tooltip="Обычный бус">
                     <img src="./assets/price/icon.png" alt="" />
                   </span>
                 </p>
 
                 <p class="pricing__price--km">
-                  8 зл/км
+                  8 zł/<span data-i18n="km">км</span>
                   <span
                     class="tooltip-wrapper"
                     data-tooltip="Бус на 10 EP + Гидроборт"
@@ -425,12 +450,14 @@
 
             <div class="pricing__item">
               <div class="pricing__details">
-                <p class="pricing__service-name">
+                <p class="pricing__service-name" data-i18n="assembly">
                   Разборка / сборка мебели и расстановка
                 </p>
               </div>
               <div class="pricing__price">
-                <p class="pricing__price--hour">70 - 100 zł/элемент</p>
+                <p class="pricing__price--hour">
+                  70 - 100 zł/<span data-i18n="element">элемент</span>
+                </p>
               </div>
             </div>
           </div>
@@ -442,24 +469,29 @@
             <div class="statistic__item">
               <div>
                 <img src="./assets/statistic/gerb.svg" alt="" />
-                <p>3 года</p>
+                <p>3 <span data-i18n="year">года</span></p>
               </div>
-              <p class="statistic__item--subtitle">Опыта работы в Польше</p>
+              <p class="statistic__item--subtitle" data-i18n="experience">
+                Опыта работы в Польше
+              </p>
             </div>
             <div class="statistic__item">
               <div>
                 <img src="./assets/statistic/cup.svg" alt="" />
-
-                <p>5 лет</p>
+                <p>5 <span data-i18n="years">лет</span></p>
               </div>
-              <p class="statistic__item--subtitle">В cфере перевозок</p>
+              <p class="statistic__item--subtitle" data-i18n="experienceMoving">
+                В cфере перевозок
+              </p>
             </div>
             <div class="statistic__item">
               <div>
                 <img src="./assets/statistic/box.svg" alt="" />
                 <p>1000+</p>
               </div>
-              <p class="statistic__item--subtitle">Выполненных заказов</p>
+              <p class="statistic__item--subtitle" data-i18n="completedOrders">
+                Выполненных заказов
+              </p>
             </div>
           </div>
         </div>
@@ -495,11 +527,15 @@
       </section>
       <section class="reviews">
         <div class="container">
-          <h2 class="reviews__title">Отзывы наших клиентов</h2>
+          <h2 class="reviews__title" data-i18n="reviewTitle">
+            Отзывы наших клиентов
+          </h2>
           <div class="reviews__rating-summary">
             <span class="reviews__score">5.0 / 5</span>
             <div class="reviews__stars">★★★★★</div>
-            <span class="reviews__count">9 Отзывов</span>
+            <span class="reviews__count"
+              >9 <span data-i18n="reviewsCount">Отзывов</span></span
+            >
           </div>
 
           <div class="reviews-slider">
@@ -511,8 +547,12 @@
                       А
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Александр Белов</div>
-                      <div class="review-card__date">2 недели назад</div>
+                      <div class="review-card__name" data-i18n="alex">
+                        Александр Белов
+                      </div>
+                      <div class="review-card__date" data-i18n="twoWeeks">
+                        2 недели назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/russia.png" alt="" />
@@ -521,7 +561,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="firstReview">
                     Заказывали комплексный переезд квартиры и остались в
                     восторге. Фирма заранее доставила нам коробки, что очень
                     упростило сборы. Особенно переживала за стеклянный стол и
@@ -536,11 +576,15 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      И
+                      <span data-i18n="i">И</span>
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Ирина Кравченко</div>
-                      <div class="review-card__date">1 месяц назад</div>
+                      <div class="review-card__name" data-i18n="irina">
+                        Ирина Кравченко
+                      </div>
+                      <div class="review-card__date" data-i18n="oneMonth">
+                        1 месяц назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -549,7 +593,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="secondReview">
                     Очень профессиональная бригада. Приехали идеально вовремя,
                     что для меня было ключевым моментом. Все мебель была
                     тщательно упакована в пленку и одеяла, благодаря чему ничего
@@ -564,11 +608,15 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      С
+                      <span data-i18n="s">С</span>
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Сергей Орлов</div>
-                      <div class="review-card__date">3 недели назад</div>
+                      <div class="review-card__name" data-i18n="sergey">
+                        Сергей Орлов
+                      </div>
+                      <div class="review-card__date" data-i18n="threeWeeks">
+                        3 недели назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/russia.png" alt="" />
@@ -577,7 +625,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="thirdReview">
                     Фантастический сервис! Команда прибыла точно в срок и
                     обращалась с моими вещами предельно аккуратно. Очень
                     эффективно справились с погрузкой и разгрузкой, даже с
@@ -591,11 +639,15 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--red">
-                      Н
+                      <span data-i18n="n">Н</span>
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Наталья Бондарь</div>
-                      <div class="review-card__date">1 неделя назад</div>
+                      <div class="review-card__name" data-i18n="natalia">
+                        Наталья Бондарь
+                      </div>
+                      <div class="review-card__date" data-i18n="oneWeek">
+                        1 неделя назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -604,7 +656,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="fourthReview">
                     Быстро, недорого и невероятно надежно. Ребята справились с
                     переездом квартиры-студии всего за 3 часа. Были очень
                     вежливы и помогли расставить мебель на новом месте. Никаких
@@ -621,8 +673,12 @@
                       М
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Максим Воронин</div>
-                      <div class="review-card__date">5 дней назад</div>
+                      <div class="review-card__name" data-i18n="maxim">
+                        Максим Воронин
+                      </div>
+                      <div class="review-card__date" data-i18n="fiveDays">
+                        5 дней назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -631,7 +687,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="fifthReview">
                     Отличный опыт переезда домашнего офиса. Я волновался за
                     мониторы и компьютерное оборудование, но они идеально
                     упаковали все в стрейч-пленку. Бригада была вежливой,
@@ -645,11 +701,15 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--red">
-                      В
+                      <span data-i18n="v">В</span>
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Владимир Ткачук</div>
-                      <div class="review-card__date">2 месяца назад</div>
+                      <div class="review-card__name" data-i18n="vladimir">
+                        Владимир Ткачук
+                      </div>
+                      <div class="review-card__date" data-i18n="twoMonth">
+                        2 месяца назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -658,7 +718,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="sixthReview">
                     Сотрудничество с этой фирмой — чистое удовольствие. Нам
                     нужно было перевезти очень тяжелый шкаф и пианино на
                     четвертый этаж без лифта. Парни справились без малейших
@@ -676,8 +736,12 @@
                       E
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Елена Иванова</div>
-                      <div class="review-card__date">1 неделя назад</div>
+                      <div class="review-card__name" data-i18n="elena">
+                        Елена Иванова
+                      </div>
+                      <div class="review-card__date" data-i18n="oneWeek">
+                        1 неделя назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -686,7 +750,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="seventhReview">
                     Большое спасибо ребятам за помощь! Перевезли все очень
                     аккуратно, даже мое любимое пианино и хрупкую посуду.
                     Работали быстро, слаженно и с позитивным настроем. Цена была
@@ -704,8 +768,12 @@
                       T
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Тарас Мазур</div>
-                      <div class="review-card__date">3 дня назад</div>
+                      <div class="review-card__name" data-i18n="taras">
+                        Тарас Мазур
+                      </div>
+                      <div class="review-card__date" data-i18n="threeDays">
+                        3 дня назад
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/russia.png" alt="" />
@@ -714,7 +782,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="eigthReview">
                     Это уже мой второй переезд с Vitolio и в очередной раз я не
                     разочаровался. Услуга выполнена на высшем уровне. Парни не
                     только перевезли вещи, но и помогли с разборкой и обратной
@@ -728,11 +796,15 @@
                 <div class="review-card">
                   <div class="review-card__header">
                     <div class="review-card__avatar review-card__avatar--blue">
-                      С
+                      <span data-i18n="s">С</span>
                     </div>
                     <div class="review-card__info">
-                      <div class="review-card__name">Светлана Коваленко</div>
-                      <div class="review-card__date">Вчера</div>
+                      <div class="review-card__name" data-i18n="svetlana">
+                        Светлана Коваленко
+                      </div>
+                      <div class="review-card__date" data-i18n="yesterday">
+                        Вчера
+                      </div>
                     </div>
                     <div class="review-card__flag">
                       <img src="./assets/header/ukraine.png" alt="" />
@@ -741,7 +813,7 @@
                   <div class="review-card__stars">
                     ★★★★★ <span class="review-card__score-text">5.0</span>
                   </div>
-                  <p class="review-card__text">
+                  <p class="review-card__text" data-i18n="ninthReview">
                     Мне нужен был срочный переезд в последнюю минуту, и они
                     единственные, кто смог помочь в такие сжатые сроки. Грузчики
                     были невероятно вежливы и осторожны с моими хрупкими вещами.
@@ -751,7 +823,6 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination reviews-pagination"></div>
           </div>
         </div>
       </section>
@@ -776,9 +847,9 @@
                     fill="#1f3a5f"
                   />
                 </svg>
-                <h2>Сделать заказ онлайн</h2>
+                <h2 data-i18n="formTitle">Сделать заказ онлайн</h2>
               </div>
-              <p class="leadForm__card--subtitle">
+              <p class="leadForm__card--subtitle" data-i18n="formSubTitle">
                 *Наш менеджер свяжется с Вами для уточнения деталей
               </p>
             </div>
@@ -805,6 +876,7 @@
                   id="name"
                   class="input-field"
                   placeholder="Имя"
+                  data-i18n="formName"
                   required
                 />
               </div>
@@ -831,6 +903,7 @@
                   id="phone"
                   class="input-field"
                   placeholder="Номер телефона"
+                  data-i18n="phoneNumber"
                   required
                 />
               </div>
@@ -858,9 +931,12 @@
                   id="addressFrom"
                   class="input-field"
                   placeholder="Адрес откуда везти"
+                  data-i18n="movingFrom"
                   required
                 />
-                <div class="input-hint">Укажите адрес, откуда забрать вещи</div>
+                <div class="input-hint" data-i18n="movingFromSub">
+                  Укажите адрес, откуда забрать вещи
+                </div>
               </div>
 
               <div class="input-group">
@@ -886,9 +962,12 @@
                   id="addressTo"
                   class="input-field"
                   placeholder="Адрес куда везти"
+                  data-i18n="movingTo"
                   required
                 />
-                <div class="input-hint">Укажите адрес, куда доставить</div>
+                <div class="input-hint" data-i18n="movingToSub">
+                  Укажите адрес, куда доставить
+                </div>
               </div>
 
               <div class="input-group">
@@ -924,15 +1003,18 @@
                   id="dateTime"
                   class="input-field"
                   placeholder="Дата и время переезда"
+                  data-i18n="dateTime"
                   required
                   onfocus="(this.type='datetime-local')"
                   onblur="(this.value ? this.type='datetime-local' : this.type='text')"
                 />
-                <div class="input-hint">Укажите дату переезда</div>
+                <div class="input-hint" data-i18n="dateTimeSub">
+                  Укажите дату переезда
+                </div>
               </div>
 
               <div class="action">
-                <button type="submit" class="action-button">
+                <button type="submit" class="action-button" data-i18n="cost">
                   Рассчитать стоимость
                 </button>
               </div>
@@ -973,7 +1055,7 @@
             </div>
             <div class="footer__social">
               <div>
-                <p>Наши соц.сети:</p>
+                <p data-i18n="socials">Наши соц.сети:</p>
               </div>
               <div class="footer__social--links">
                 <a href="tg://resolve?phone=48883711265" target="_blank">
@@ -1118,10 +1200,10 @@
                   />
                 </svg>
               </div>
-              <span>Заказать онлайн</span>
+              <span data-i18n="onlineOrder">Заказать онлайн</span>
             </a>
 
-            <a href="tel:+48573666398" class="modal__action-btn">
+            <a href="tel:+48 736 335 283" class="modal__action-btn">
               <div class="modal__icon">
                 <svg
                   width="24"
@@ -1136,7 +1218,7 @@
                   />
                 </svg>
               </div>
-              <span>+48 573 666 398</span>
+              <span>+48 736 335 283</span>
             </a>
             <a
               href="https://wa.me/48883711265"
