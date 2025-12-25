@@ -1,4 +1,5 @@
 import "../styles/main.scss";
+import translations from "./translations/translations.js";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -233,4 +234,56 @@ document.addEventListener("DOMContentLoaded", () => {
       closeModal();
     }
   });
+});
+
+function translatePage(lang) {
+  const elements = document.querySelectorAll("[data-i18n]");
+
+  elements.forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    const translation = translations[lang][key];
+
+    if (translation) {
+      if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+        element.placeholder = translation;
+      } else {
+        element.innerHTML = translation;
+      }
+    }
+  });
+}
+
+function updateLangInterface(lang, text) {
+  selectedLang.innerHTML = text;
+  selectedLang.className = `header__selectedLanguage ${lang}`;
+
+  localStorage.setItem("userLang", lang);
+  localStorage.setItem("userLangText", text);
+}
+
+listItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const langCode = this.getAttribute("data-value");
+    const langText = this.innerHTML;
+
+    updateLangInterface(langCode, langText);
+    translatePage(langCode);
+
+    languageList.style.display = "none";
+    setTimeout(() => {
+      languageList.style.display = "";
+    }, 50);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("userLang");
+  const savedText = localStorage.getItem("userLangText");
+
+  if (savedLang && savedText) {
+    updateLangInterface(savedLang, savedText);
+    translatePage(savedLang);
+  } else {
+    translatePage("ru");
+  }
 });
