@@ -14,6 +14,42 @@ const translationsEn = {
   specialCargo: "Special <br/> Cargo",
   transfer: "Transfers <br/> & Trips",
 
+  // Services cards //
+  servicesData: {
+    apartment: {
+      title: "Home Moving",
+      text: "We handle the loading, transport, and unloading of furniture and personal belongings. We also offer disassembly, assembly, and packing services to ensure safe transport. We work with care to guarantee reliable delivery to your new address.",
+    },
+    office: {
+      title: "Commercial moving",
+      text: "We provide complete office relocation services, including the loading, transport, and unloading of furniture, equipment, and documents. We also handle furniture disassembly and reassembly. We treat office electronics with special care and work efficiently to minimize business downtime.",
+    },
+    delivery: {
+      title: "Store Delivery",
+      text: "We deliver store purchases, including furniture, appliances, and other bulky items. Assistance with loading and unloading is available upon request. We guarantee the safe and careful delivery of your items to the specified address.",
+    },
+    materials: {
+      title: "Construction Supplies",
+      text: "Transportation of dry mixes, drywall, tiles, and other construction materials. Our vehicles are equipped to handle heavy loads. Movers are available upon request to carry materials up to your floor.",
+    },
+    cleaning: {
+      title: "Cleaning",
+      text: "We provide cleaning services for apartments, houses, offices, and commercial spaces. We offer both one-time and regular cleaning using professional equipment and effective products. Our specialists work meticulously to guarantee order and comfort in every space.",
+    },
+    fragile: {
+      title: "Fragile Items",
+      text: "Transportation of fragile items and cargo requiring extra care. We use reliable packaging, careful loading, and secure strapping inside the vehicle. We ensure gentle handling and safe delivery, keeping your items intact.",
+    },
+    special: {
+      title: "Special cargo",
+      text: "Transportation of non-standard and complex cargo: large equipment, heavy structures, industrial machinery, as well as pianos and grand pianos requiring special handling.",
+    },
+    transfer: {
+      title: "Transfers & Trips",
+      text: "Comfortable passenger transport in full compliance with safety standards. We provide transfers, city trips, and intercity routes for individuals and organizations. Our fleet consists of modern vehicles in impeccable technical condition, driven by experienced and responsible drivers.",
+    },
+  },
+
   // Auto //
   dimension: "Cargo Dimensions",
   length: "Length",
@@ -38,6 +74,8 @@ const translationsEn = {
   hours: "hours",
   element: "item",
   km: "km",
+  tooltipBus: "Standard van",
+  tooltipBusBig: "10 EP Van + Tail Lift",
 
   // Statistic //
   years: "years",
@@ -91,7 +129,7 @@ const translationsEn = {
 
   // Form //
   formTitle: "Make an order online",
-  formSubTitle: "Our manager will contact you to confirm details",
+  formSubTitle: "*Our manager will contact you to confirm details",
   formName: "Name",
   phoneNumber: "Phone Number",
   movingFrom: "Moving From",

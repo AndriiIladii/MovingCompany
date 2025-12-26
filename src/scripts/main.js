@@ -156,41 +156,6 @@ listItems.forEach((item) => {
   });
 });
 
-const servicesData = {
-  apartment: {
-    title: "Квартирные переезды",
-    text: "Выполняем погрузку, транспортировку и разгрузку мебели и личных вещей. При необходимости помогаем с разборкой, сборкой и упаковкой для безопасной транспортировки.Работаем аккуратно и обеспечиваем надёжную доставку на новый адрес.",
-  },
-  office: {
-    title: "Переезды офисов и бизнесов",
-    text: "Выполняем офисные переезды с погрузкой, транспортировкой и разгрузкой мебели, оборудования и документов. При необходимости осуществляем демонтаж и монтаж мебели.Бережно относимся к офисной технике и работаем оперативно, минимизируя простой бизнеса.",
-  },
-  delivery: {
-    title: "Доставка покупок",
-    text: "Выполняем доставку покупок из магазинов, включая мебель, бытовую технику и другие крупногабаритные товары. При необходимости помогаем с погрузкой и разгрузкой. Гарантируем аккуратную доставку ваших покупок по указанному адресу.",
-  },
-  materials: {
-    title: "Доставка стройматериалов",
-    text: "Перевозка смесей, гипсокартона, плитки и других стройматериалов. Наш транспорт подходит для тяжелых грузов. Возможен заказ грузчиков для подъема материалов на этаж.",
-  },
-  cleaning: {
-    title: "Клининг",
-    text: "Предоставляем клининговые услуги для квартир, домов, офисов и коммерческих помещений. Выполняем разовую и регулярную уборку с использованием профессионального оборудования и эффективных средств. Наши специалисты работают аккуратно, соблюдают стандарты чистоты и гарантируют порядок и комфорт в каждом помещении.",
-  },
-  fragile: {
-    title: "Хрупкие грузы",
-    text: "Выполняем перевозку хрупких вещей и грузов с повышенными требованиями к сохранности. Используем надёжную упаковку, аккуратную погрузку и фиксацию груза в автомобиле.Обеспечиваем бережную транспортировку и доставку в целости и сохранности.",
-  },
-  special: {
-    title: "Перевозка спец. грузов",
-    text: "Выполняем перевозку нестандартных и сложных грузов: крупногабаритного оборудования, тяжёлых конструкций, промышленных станков, а также роялей и пианино, требующих особой аккуратности.",
-  },
-  transfer: {
-    title: "Трансфер и поездки",
-    text: "Выполняем пассажирские перевозки с комфортом и соблюдением всех требований безопасности. Обеспечиваем трансферы, поездки по городу и междугородние маршруты для частных лиц и организаций.Мы используем современный транспорт в безупречном техническом состоянии, управляемый опытными и ответственными водителями.",
-  },
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("serviceModal");
   const modalTitle = modal.querySelector(".modal__title");
@@ -201,12 +166,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeLinks = modal.querySelectorAll(".js-close-modal");
 
   function openModal(serviceType) {
-    const data = servicesData[serviceType];
+    const currentLang = localStorage.getItem("userLang") || "ru";
+    const data = translations[currentLang]?.servicesData?.[serviceType];
+
     if (data) {
       modalTitle.textContent = data.title;
       modalText.textContent = data.text;
       modal.classList.add("active");
       document.body.style.overflow = "hidden";
+    } else {
+      console.error(
+        `Нет перевода для услуги: ${serviceType} на языке ${currentLang}`
+      );
     }
   }
 
@@ -244,7 +215,12 @@ function translatePage(lang) {
     const translation = translations[lang][key];
 
     if (translation) {
-      if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
+      if (element.hasAttribute("data-tooltip")) {
+        element.setAttribute("data-tooltip", translation);
+      } else if (
+        element.tagName === "INPUT" ||
+        element.tagName === "TEXTAREA"
+      ) {
         element.placeholder = translation;
       } else {
         element.innerHTML = translation;
@@ -284,6 +260,24 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLangInterface(savedLang, savedText);
     translatePage(savedLang);
   } else {
-    translatePage("ru");
+    let userBrowserLang = (navigator.language || navigator.userLanguage || "en")
+      .slice(0, 2)
+      .toLowerCase();
+    if (userBrowserLang === "uk") userBrowserLang = "ua";
+
+    const supportedLangs = {
+      ru: "RU",
+      en: "EN",
+      pl: "PL",
+      ua: "UA",
+    };
+
+    if (supportedLangs[userBrowserLang]) {
+      updateLangInterface(userBrowserLang, supportedLangs[userBrowserLang]);
+      translatePage(userBrowserLang);
+    } else {
+      updateLangInterface("en", "EN");
+      translatePage("en");
+    }
   }
 });
