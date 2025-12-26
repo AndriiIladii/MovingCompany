@@ -260,9 +260,10 @@ document.addEventListener("DOMContentLoaded", () => {
     updateLangInterface(savedLang, savedText);
     translatePage(savedLang);
   } else {
-    let userBrowserLang = (navigator.language || navigator.userLanguage || "en")
-      .slice(0, 2)
-      .toLowerCase();
+    const rawLang = navigator.language || navigator.userLanguage || "en";
+
+    let userBrowserLang = rawLang.slice(0, 2).toLowerCase();
+
     if (userBrowserLang === "uk") userBrowserLang = "ua";
 
     const supportedLangs = {
