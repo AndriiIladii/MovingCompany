@@ -257,12 +257,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedText = localStorage.getItem("userLangText");
 
   if (savedLang && savedText) {
+    console.log("Использую сохраненный язык");
     updateLangInterface(savedLang, savedText);
     translatePage(savedLang);
   } else {
-    let userBrowserLang = (navigator.language || navigator.userLanguage || "en")
-      .slice(0, 2)
-      .toLowerCase();
+    const rawLang = navigator.language || navigator.userLanguage || "en";
+    console.log("2. Реальный язык браузера:", rawLang);
+
+    let userBrowserLang = rawLang.slice(0, 2).toLowerCase();
+
     if (userBrowserLang === "uk") userBrowserLang = "ua";
 
     const supportedLangs = {
