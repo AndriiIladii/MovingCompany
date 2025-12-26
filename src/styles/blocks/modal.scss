@@ -32,16 +32,15 @@
     position: relative;
     background-color: #fff;
     width: 100%;
-    max-width: 900px; // Ширина как на макете
+    max-width: 900px;
     border-radius: 16px;
     padding: 60px 50px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     transform: translateY(20px);
     transition: transform 0.3s ease;
-    margin: 20px; // Отступ на мобильных
+    margin: 20px;
   }
 
-  // Анимация всплывания
   &.active &__container {
     transform: translateY(0);
   }
@@ -109,7 +108,7 @@
     font-size: 14px;
     gap: 10px;
     transition: transform 0.2s;
-    width: 120px;
+    width: 125px;
 
     &:hover {
       transform: scale(1.05);
