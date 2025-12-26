@@ -257,12 +257,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedText = localStorage.getItem("userLangText");
 
   if (savedLang && savedText) {
-    console.log("Использую сохраненный язык");
     updateLangInterface(savedLang, savedText);
     translatePage(savedLang);
   } else {
     const rawLang = navigator.language || navigator.userLanguage || "en";
-    console.log("2. Реальный язык браузера:", rawLang);
 
     let userBrowserLang = rawLang.slice(0, 2).toLowerCase();
 
