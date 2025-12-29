@@ -4,6 +4,7 @@ const translationsRu = {
   Профессионально. Надёжно.`,
   callUs: "Позвонить",
   onlineOrder: "Заказать онлайн",
+  modalPrice: "Цена",
 
   // Services //
   homeMoving: "Квартирные <br/> переезды",

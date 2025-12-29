@@ -3,6 +3,7 @@ const translationsEn = {
   title: "Optimal.<br/> Professional. Reliable.",
   callUs: "Call now",
   onlineOrder: "Order online",
+  modalPrice: "Price",
 
   // Services //
   homeMoving: "Home <br/> Moving",

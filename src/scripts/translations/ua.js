@@ -4,6 +4,7 @@ const translationsUa = {
   Професійно. Надійно.`,
   callUs: "Зателефонувати",
   onlineOrder: "Замовити онлайн",
+  modalPrice: "Ціна",
 
   // Services //
   homeMoving: "Квартирні <br/> переїзди",

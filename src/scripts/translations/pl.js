@@ -4,6 +4,7 @@ const translationsPl = {
   Profesjonalnie. Niezawodnie.`,
   callUs: "Zadzwoń",
   onlineOrder: "Zamów online",
+  modalPrice: "Cena",
 
   // Services //
   homeMoving: "Przeprowadzki <br/> mieszkań",

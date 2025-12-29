@@ -32,3 +32,13 @@
     width: 100%;
   }
 }
+
+.btn__pricing {
+  outline: none;
+  transition: all ease-in-out 0.3s;
+  &:hover {
+    background-color: #ff8c00;
+    color: #000;
+    transform: scale(1.1);
+  }
+}
