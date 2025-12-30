@@ -2,7 +2,7 @@ const translationsUa = {
   // Header //
   title: `Оптимально.<br/> 
   Професійно. Надійно.`,
-  callUs: "Зателефонувати",
+  callUs: "Подзвонити",
   onlineOrder: "Замовити онлайн",
   modalPrice: "Ціна",
 

@@ -126,25 +126,19 @@
   &__text {
     font-size: 15px;
     line-height: 1.6;
-    color: #162a47; // Светло-серый текст (читабельный на темном)
+    color: #162a47;
   }
 }
 
 .reviews-slider {
   width: 100%;
-  max-width: 1300px; // Ограничиваем ширину на больших экранах
-  margin: 0 auto; // Ставим весь блок по центру
+  max-width: 1300px;
+  margin: 0 auto;
   overflow: hidden !important;
-  // Чтобы тени по краям не обрезались
 }
 
 .reviews .swiper-slide {
   max-width: none !important;
-
-  // ВАЖНО: Я убрал здесь "width: auto !important;"
-  // Теперь Swiper сам растянет слайд как надо (на 33% экрана)
-
-  // Центрируем карточку внутри зоны слайда
   display: flex;
   justify-content: center;
 
@@ -169,6 +163,8 @@
   border-radius: 0 !important;
 }
 
-.reviews .swiper-pagination {
-  display: none !important;
+.reviews-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0 0;
 }

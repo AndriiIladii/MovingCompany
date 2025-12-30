@@ -56,6 +56,11 @@ header {
     display: block;
   }
 
+  &:hover .header__selectedLanguage::after {
+    transform: rotate(225deg);
+    margin-bottom: -2px;
+  }
+
   li {
     display: flex;
     justify-content: space-between;
@@ -101,6 +106,8 @@ header {
 .header__selectedLanguage {
   cursor: pointer;
   display: flex;
+  cursor: pointer;
+  align-items: center;
   justify-content: flex-end;
   width: 140px;
   column-gap: 10px;
@@ -112,6 +119,18 @@ header {
     height: 20px;
     background-image: url(../../assets/header/ru.png);
     background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    margin-bottom: 3px;
+    transition: transform 0.3s ease, margin-bottom 0.3s ease;
   }
 
   &.pl::before {

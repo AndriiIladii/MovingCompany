@@ -77,6 +77,18 @@ const reviewsSwiper = new Swiper(".reviews-slider", {
   },
 });
 
+const autoSwiper = new Swiper(".auto-slider", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 50,
+  centeredSlides: true,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
+
 const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
 const CHAT_ID = "-5059325929";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
