@@ -1,3 +1,5 @@
+@use "../base/vars" as *;
+
 header {
   background-color: #1f3a5f;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
@@ -7,6 +9,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.header__logo {
+  a {
+    img {
+      width: 250px;
+      margin-left: -20px;
+
+      @media screen and (max-width: $breakpoint__s) {
+        margin-left: -45px;
+      }
+    }
   }
 }
 
