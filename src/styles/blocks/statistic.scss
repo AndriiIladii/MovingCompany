@@ -1,9 +1,15 @@
+@use "../base/vars" as *;
+
 .statistic {
   padding: 48px 0;
   background-color: #1f3a5f;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
     radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
   color: #fff;
+
+  @media screen and (max-width: $breakpoint__xs) {
+    padding: 25px 0;
+  }
 
   &__wrapper {
     display: flex;

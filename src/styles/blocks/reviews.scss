@@ -7,11 +7,15 @@
     radial-gradient(circle at center, #2c4163 0%, #1a2b45 100%);
   padding: 60px 0;
   color: #fff;
-  overflow: hidden; // Чтобы слайдер не растягивал страницу
+  overflow: hidden;
+
+  @media screen and (max-width: $breakpoint__xl) {
+    padding: 32px 0;
+  }
 
   &__title {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-weight: 600;
   }
 
@@ -21,7 +25,7 @@
     gap: 10px;
     margin-bottom: 40px;
     font-size: 18px;
-    color: #cbd5e1; // Светло-серый текст
+    color: #cbd5e1;
   }
 
   &__score {
@@ -31,29 +35,25 @@
   }
 
   &__stars {
-    color: #ffc107; // Золотой цвет звезд
+    color: #ffc107;
     letter-spacing: 2px;
   }
 }
 
-// === ВАЖНО: Слайд ===
 .review__slide {
-  height: auto; // Чтобы все карточки были одинаковой высоты
+  height: auto;
   display: flex;
-  justify-content: center; // Центрируем карточку внутри слайда
-  // width не задаем! Swiper сам посчитает.
+  justify-content: center;
 }
 
-// === ВАЖНО: Карточка ===
 .review-card {
-  // Цвет фона карточки (ТЕМНО-СИНИЙ, КАК НА МАКЕТЕ)
   background-color: #fff;
   border-radius: 12px;
   padding: 30px 25px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); // Тень для объема
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 
   width: 100%;
-  max-width: 400px; // Ограничение ширины карточки
+  max-width: 400px;
 
   display: flex;
   flex-direction: column;

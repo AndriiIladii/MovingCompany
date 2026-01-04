@@ -4,8 +4,8 @@
   background-color: #fff;
   padding: 40px 0 80px;
 
-  @media screen and (max-width: $breakpoint__xs) {
-    padding: 40px 0;
+  @media screen and (max-width: $breakpoint__xl) {
+    padding: 15px 0 45px;
   }
 }
 
@@ -84,6 +84,10 @@
 
   &.main {
     color: red;
+
+    @media screen and (max-width: $breakpoint__xs) {
+      text-align: center;
+    }
   }
 }
 

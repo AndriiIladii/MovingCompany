@@ -10,6 +10,16 @@ header {
     justify-content: space-between;
     align-items: center;
   }
+
+  .container {
+    @media screen and (max-width: $breakpoint__xl) {
+      padding: 22px 15px;
+    }
+
+    @media screen and (max-width: $breakpoint__xs) {
+      padding: 15px;
+    }
+  }
 }
 
 .header__logo {
@@ -17,10 +27,6 @@ header {
     img {
       width: 250px;
       margin-left: -20px;
-
-      @media screen and (max-width: $breakpoint__s) {
-        margin-left: -45px;
-      }
     }
   }
 }
