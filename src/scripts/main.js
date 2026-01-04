@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
+  a11y: false,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -49,6 +50,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 const reviewsSwiper = new Swiper(".reviews-slider", {
+  a11y: false,
   loop: true,
   centeredSlides: true,
   autoplay: {
@@ -74,6 +76,19 @@ const reviewsSwiper = new Swiper(".reviews-slider", {
       centeredSlides: true,
       spaceBetween: 30,
     },
+  },
+});
+
+const autoSwiper = new Swiper(".auto-slider", {
+  a11y: false,
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 50,
+  centeredSlides: true,
+
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
 });
 
