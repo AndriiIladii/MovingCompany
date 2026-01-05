@@ -42,7 +42,7 @@ module.exports = {
       },
 
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(c|sa|sc)ss$/i,
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {
