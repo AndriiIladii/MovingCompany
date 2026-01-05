@@ -1,6 +1,8 @@
 import "../styles/main.scss";
 import translations from "./translations/translations.js";
 import axios from "axios";
+import Swiper from "swiper/bundle";
+import "swiper/css/bundle";
 import Swal from "sweetalert2";
 
 const swiper = new Swiper(".swiper", {
