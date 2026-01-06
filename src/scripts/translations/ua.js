@@ -1,6 +1,6 @@
 const translationsUa = {
   // Header //
-  title: `Оптимально.<br/> 
+  title: `Переїзди Варшава.<br/> 
   Професійно. Надійно.`,
   callUs: "Подзвонити",
   onlineOrder: "Замовити онлайн",

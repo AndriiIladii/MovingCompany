@@ -1,6 +1,6 @@
 const translationsRu = {
   // Header //
-  title: `Оптимально.<br/> 
+  title: `Переезды Варшава.<br/> 
   Профессионально. Надёжно.`,
   callUs: "Позвонить",
   onlineOrder: "Заказать онлайн",

@@ -1,6 +1,6 @@
 const translationsEn = {
   // Header //
-  title: "Optimal.<br/> Professional. Reliable.",
+  title: "Warsaw Moving.<br/> Professional. Reliable.",
   callUs: "Call now",
   onlineOrder: "Order online",
   modalPrice: "Price",

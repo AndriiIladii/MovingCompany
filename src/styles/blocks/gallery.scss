@@ -86,7 +86,7 @@
   }
 
   @media screen and (max-width: $breakpoint__ms) {
-    display: none;
+    display: none !important;
   }
 }
 .swiper-button-next {
@@ -105,13 +105,13 @@
   }
 
   @media screen and (max-width: $breakpoint__ms) {
-    display: none;
+    display: none !important;
   }
 }
 
 .swiper-pagination-bullets {
   @media screen and (max-width: $breakpoint__ms) {
-    display: none;
+    display: none !important;
   }
 }
 

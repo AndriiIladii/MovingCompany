@@ -1,7 +1,7 @@
 const translationsPl = {
   // Header //
-  title: `Optymalnie.<br/> 
-  Profesjonalnie. Niezawodnie.`,
+  title: `Przeprowadzki Warszawa.<br />
+    Profesjonalnie i Niezawodnie.`,
   callUs: "Zadzwoń",
   onlineOrder: "Zamów online",
   modalPrice: "Cena",
