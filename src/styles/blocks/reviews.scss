@@ -41,9 +41,9 @@
 }
 
 .review__slide {
-  height: auto;
   display: flex;
   justify-content: center;
+  height: auto !important;
 }
 
 .review-card {
@@ -51,7 +51,6 @@
   border-radius: 12px;
   padding: 30px 25px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-
   width: 100%;
   max-width: 400px;
 
@@ -76,7 +75,7 @@
     font-weight: bold;
     margin-right: 15px;
     color: #fff;
-    flex-shrink: 0; // Чтобы аватар не сжимался
+    flex-shrink: 0;
 
     &--red {
       background-color: #d32f2f;
