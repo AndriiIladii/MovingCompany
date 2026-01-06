@@ -65,10 +65,11 @@
     }
 
     &--phone {
-      p {
+      a {
         font-size: clamp(1.75rem, 1.302rem + 1.89vw, 3rem);
         line-height: 48px;
-        color: inherit;
+        color: rgb(255, 255, 255) !important;
+        text-decoration: none;
       }
     }
 
