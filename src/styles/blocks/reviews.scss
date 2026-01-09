@@ -1,7 +1,6 @@
 @use "../base/vars" as *;
 
 .reviews {
-  // Темный фон всей секции
   background-color: #1a2b45;
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
     radial-gradient(circle at center, #2c4163 0%, #1a2b45 100%);
@@ -132,6 +131,7 @@
 .reviews-slider {
   width: 100%;
   max-width: 1300px;
+  height: 100%;
   margin: 0 auto;
   overflow: hidden !important;
 }

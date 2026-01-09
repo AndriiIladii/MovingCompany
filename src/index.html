@@ -15,7 +15,6 @@
       content="przeprowadzki warszawa, tanie przeprowadzki, taxi bagażowe warszawa, transport mebli, bagażówka, vitolio transport"
     />
     <link rel="canonical" href="https://vitolio.pl/" />
-
     <link rel="alternate" hreflang="pl" href="https://vitolio.pl/" />
     <link rel="alternate" hreflang="ru" href="https://vitolio.pl/?lang=ru" />
     <link rel="alternate" hreflang="en" href="https://vitolio.pl/?lang=en" />
@@ -351,21 +350,21 @@
                     <div class="auto__dimensions--numbers">
                       <div>
                         <span data-i18n="length">Długość</span>
-                        <p>4,2 <span data-i18n="m">m</span></p>
+                        <p>3,8 <span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image">
                         <img src="./assets/auto/icon.svg" alt="icon" />
                       </div>
                       <div>
                         <span data-i18n="width">Szerokość</span>
-                        <p>2,4 <span data-i18n="m">m</span></p>
+                        <p>1,8 <span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image">
                         <img src="./assets/auto/icon.svg" alt="icon" />
                       </div>
                       <div>
                         <span data-i18n="height">Wysokość</span>
-                        <p>2,5 <span data-i18n="m">m</span></p>
+                        <p>1,9 <span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image showMobile">
                         <img src="./assets/auto/icon.svg" alt="icon" />
@@ -416,21 +415,21 @@
                     <div class="auto__dimensions--numbers">
                       <div>
                         <span data-i18n="length">Długość</span>
-                        <p>3,8 <span data-i18n="m">m</span></p>
+                        <p>4,2<span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image">
                         <img src="./assets/auto/icon.svg" alt="" />
                       </div>
                       <div>
                         <span data-i18n="width">Szerokość</span>
-                        <p>1,8 <span data-i18n="m">m</span></p>
+                        <p>2,4 <span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image">
                         <img src="./assets/auto/icon.svg" alt="" />
                       </div>
                       <div>
                         <span data-i18n="height">Wysokość</span>
-                        <p>1,9 <span data-i18n="m">m</span></p>
+                        <p>2,5 <span data-i18n="m">m</span></p>
                       </div>
                       <div class="auto__dimensions--image showMobile">
                         <img src="./assets/auto/icon.svg" alt="" />
@@ -470,6 +469,8 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-button-prev auto-slider-button-prev"></div>
+              <div class="swiper-button-next auto-slider-button-next"></div>
             </div>
           </div>
         </div>
@@ -1049,6 +1050,7 @@
                   placeholder="Imię"
                   data-i18n="formName"
                   required
+                  minlength="2"
                 />
               </div>
 
@@ -1104,6 +1106,7 @@
                   placeholder="Adres załadunku"
                   data-i18n="movingFrom"
                   required
+                  minlength="3"
                 />
                 <div class="input-hint" data-i18n="movingFromSub">
                   Wpisz adres, skąd odebrać rzeczy
@@ -1135,6 +1138,7 @@
                   placeholder="Adres rozładunku"
                   data-i18n="movingTo"
                   required
+                  minlength="3"
                 />
                 <div class="input-hint" data-i18n="movingToSub">
                   Wpisz adres, dokąd dostarczyć
@@ -1176,8 +1180,6 @@
                   placeholder="Data i godzina przeprowadzki"
                   data-i18n="dateTime"
                   required
-                  onfocus="(this.type='datetime-local')"
-                  onblur="(this.value ? this.type='datetime-local' : this.type='text')"
                 />
                 <div class="input-hint" data-i18n="dateTimeSub">
                   Wybierz datę przeprowadzki
@@ -1591,6 +1593,11 @@
         ]
       }
     </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1njMqdvA4OLE76buczqvyBU7dCc4rBEk&libraries=places&language=en"
+      async
+      defer
+    ></script>
   </body>
   <script src="./scripts/main.js"></script>
 </html>
