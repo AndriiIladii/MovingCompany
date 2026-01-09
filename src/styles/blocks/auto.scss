@@ -144,6 +144,57 @@
 .auto-slider {
   width: 100%;
   margin: 0 auto;
+  position: relative;
+
+  .auto-slider-button-prev,
+  .auto-slider-button-next {
+    width: 40px !important;
+    height: 40px !important;
+    top: 40% !important;
+
+    @media screen and (max-width: $breakpoint__xl) {
+      top: 35% !important;
+    }
+  }
+}
+
+.auto-slider .auto-slider-button-prev {
+  left: 10% !important;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    left: 3% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__xl) {
+    left: -3.5% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    left: -5% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    display: none !important;
+  }
+}
+.auto-slider .auto-slider-button-next {
+  right: 10% !important;
+
+  @media screen and (max-width: $breakpoint__xxl) {
+    right: 3% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__xl) {
+    right: -3.5% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__ml) {
+    right: -5% !important;
+  }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    display: none !important;
+  }
 }
 
 .auto .swiper-slide img {

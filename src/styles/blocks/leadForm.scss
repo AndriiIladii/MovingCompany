@@ -122,3 +122,20 @@
     }
   }
 }
+
+.pac-container {
+  z-index: 10000 !important;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+}
+
+.pac-item {
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}

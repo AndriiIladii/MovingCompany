@@ -4,6 +4,8 @@ import axios from "axios";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import Swal from "sweetalert2";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
@@ -89,25 +91,43 @@ const autoSwiper = new Swiper(".auto-slider", {
   centeredSlides: true,
 
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
+  },
+
+  navigation: {
+    nextEl: ".auto-slider-button-next",
+    prevEl: ".auto-slider-button-prev",
+  },
+
+  breakpoints: {
+    320: {
+      spaceBetween: 80,
+    },
   },
 });
 
-const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
-const CHAT_ID = "-5059325929";
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+flatpickr("#dateTime", {
+  enableTime: true,
+  dateFormat: "d.m.Y H:i",
+  minDate: "today",
+  time_24hr: true,
+  disableMobile: "true",
+  defaultHour: 9,
+  defaultMinute: 0,
+});
 
 document
   .getElementById("telegramForm")
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const addressFrom = document.getElementById("addressFrom").value;
-    const addressTo = document.getElementById("addressTo").value;
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const addressFrom = document.getElementById("addressFrom").value.trim();
+    const addressTo = document.getElementById("addressTo").value.trim();
     const rawDateTime = document.getElementById("dateTime").value;
+
     const dateTimeFormatted = rawDateTime.replace("T", " ");
 
     let message = `<b>Новая заявка на переезд! 🚚</b>\n`;
@@ -116,6 +136,10 @@ document
     message += `<b>Откуда:</b> ${addressFrom}\n`;
     message += `<b>Куда:</b> ${addressTo}\n`;
     message += `<b>Дата и время:</b> ${dateTimeFormatted}`;
+
+    const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
+    const CHAT_ID = "-5059325929";
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
     axios
       .post(URI_API, {
@@ -132,7 +156,7 @@ document
           confirmButtonColor: "#f97316",
         });
         this.reset();
-        document.getElementById("dateTime").type = "text";
+        document.getElementById("dateTime").type = "text"; // Возвращаем плейсхолдер
       })
       .catch((err) => {
         console.warn(err);
@@ -143,9 +167,6 @@ document
           confirmButtonText: "Закрыть",
           confirmButtonColor: "#d33",
         });
-      })
-      .finally(() => {
-        console.log("Конец запроса");
       });
   });
 
@@ -298,4 +319,38 @@ document.addEventListener("DOMContentLoaded", () => {
       translatePage("en");
     }
   }
+});
+
+function initGoogleAutocomplete(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+
+  const options = {
+    componentRestrictions: { country: "pl" },
+    fields: [
+      "address_components",
+      "geometry",
+      "icon",
+      "name",
+      "formatted_address",
+    ],
+    types: ["address"],
+  };
+
+  if (typeof google !== "undefined" && google.maps && google.maps.places) {
+    const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
+      console.log("Выбран адрес:", place.formatted_address);
+    });
+  } else {
+    console.warn("Google Maps API еще не загружен или ключ неверный");
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    initGoogleAutocomplete("addressFrom");
+    initGoogleAutocomplete("addressTo");
+  }, 1000);
 });
