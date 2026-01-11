@@ -66,7 +66,7 @@ const translationsPl = {
   pricesTitle: "Cennik",
   pricesSubtitle: "Koszt poszczególnych usług, praca tragarzy i dojazd",
   minOrder: "Minimalne zamówienie: 2 godziny",
-  arrival: "Dojazd (Podstawienie auta)",
+  arrival: "Transport towarowy",
   driverOnly: "Sam Kierowca",
   moverService: "Usługa tragarza (pomocnika)",
   packing: "Pakowanie + materiały",
