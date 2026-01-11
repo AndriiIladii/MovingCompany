@@ -397,3 +397,32 @@ document.addEventListener("DOMContentLoaded", () => {
     initGoogleAutocomplete("addressTo");
   }, 1000);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+
+  phoneLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const url = this.href;
+
+      const callback = function () {
+        if (typeof url != "undefined") {
+          window.location = url;
+        }
+      };
+
+      if (typeof gtag === "function") {
+        gtag("event", "conversion", {
+          send_to: "AW-17826804804/y01cCLixguEbEMTovbRC",
+          value: 1.0,
+          currency: "PLN",
+          event_callback: callback,
+        });
+        setTimeout(callback, 1000);
+      } else {
+        window.location = url;
+      }
+    });
+  });
+});
