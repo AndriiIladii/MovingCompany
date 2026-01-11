@@ -64,7 +64,7 @@ const translationsEn = {
   pricesTitle: "Rates",
   pricesSubtitle: "Service rates, movers, and truck arrival fees",
   minOrder: "Min.order: 2 hours",
-  arrival: "Truck arrival",
+  arrival: "Cargo van",
   driverOnly: "(Without mover)",
   moverService: "Mover Service",
   packing: "Packing + packing Material",
