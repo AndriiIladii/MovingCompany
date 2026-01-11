@@ -11,51 +11,43 @@ AOS.init({
   once: true,
 });
 
+const statisticSection = document.querySelector(".statistic");
 const counters = document.querySelectorAll(".counter span[data-count]");
+let started = false;
 
-const container = document.querySelector(".statistic");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !started) {
+        started = true;
 
-let activated = false;
+        counters.forEach((counter) => {
+          counter.innerText = 0;
+          const target = parseInt(counter.dataset.count);
+          const step = Math.ceil(target / 50);
+          let count = 0;
 
-window.addEventListener("scroll", () => {
-  if (!container) return;
-  if (
-    pageYOffset > container.offsetTop - container.offsetHeight - 400 &&
-    activated === false
-  ) {
-    counters.forEach((counter) => {
-      counter.innerText = 0;
-      let count = 0;
+          function updateCount() {
+            count += step;
+            if (count > target) count = target;
+            counter.innerText = count;
 
-      function updateCount() {
-        const target = parseInt(counter.dataset.count);
+            if (count < target) {
+              setTimeout(updateCount, 40);
+            }
+          }
+          updateCount();
+        });
 
-        const step = Math.ceil(target / 50);
-
-        if (count < target) {
-          count += step;
-          if (count > target) count = target;
-
-          counter.innerText = count;
-          setTimeout(updateCount, 40);
-        } else {
-          counter.innerText = target;
-        }
+        observer.unobserve(entry.target);
       }
-
-      updateCount();
     });
-    activated = true;
-  } else if (
-    pageYOffset < container.offsetTop - window.innerHeight ||
-    (pageYOffset === 0 && activated === true)
-  ) {
-    counters.forEach((counter) => {
-      counter.innerText = 0;
-    });
-    activated = false;
-  }
-});
+  },
+  { threshold: 0.5 }
+);
+if (statisticSection) {
+  observer.observe(statisticSection);
+}
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
