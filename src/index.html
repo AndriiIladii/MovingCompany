@@ -36,7 +36,7 @@
       property="og:image"
       content="https://vitolio.pl/assets/header/logo.webp"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -63,15 +63,20 @@
     <link rel="manifest" href="./favicon/site.webmanifest" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NS4CG92V"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17826804804"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-17826804804");
+    </script>
     <!-- End Google Tag Manager (noscript) -->
     <header>
       <div class="container">
@@ -115,13 +120,13 @@
         <div class="container">
           <div class="hero__wrapper">
             <div class="hero__title">
-              <h1 data-i18n="title">
+              <h1 data-aos="fade-down" data-i18n="title">
                 Przeprowadzki Warszawa.<br />
                 Profesjonalnie i Niezawodnie.
               </h1>
             </div>
 
-            <div class="hero__contacts">
+            <div data-aos="fade-down" class="hero__contacts">
               <div class="hero__contacts--phone">
                 <a href="tel:+48736335283">+48&nbsp;736&nbsp;335&nbsp;283</a>
               </div>
@@ -220,7 +225,11 @@
     <main>
       <section class="services">
         <div class="services__items">
-          <div class="services__item" data-service="apartment">
+          <div
+            class="services__item"
+            data-aos="fade-up"
+            data-service="apartment"
+          >
             <div class="services__item--image">
               <img
                 src="./assets/services/apartment.webp"
@@ -234,7 +243,7 @@
               mieszkań
             </p>
           </div>
-          <div class="services__item" data-service="office">
+          <div class="services__item" data-aos="fade-up" data-service="office">
             <div class="services__item--image">
               <img
                 src="./assets/services/desk.webp"
@@ -248,7 +257,11 @@
               biur
             </p>
           </div>
-          <div class="services__item" data-service="delivery">
+          <div
+            class="services__item"
+            data-aos="fade-up"
+            data-service="delivery"
+          >
             <div class="services__item--image">
               <img
                 src="./assets/services/shopping-cart.webp"
@@ -262,7 +275,11 @@
               zakupów
             </p>
           </div>
-          <div class="services__item" data-service="materials">
+          <div
+            class="services__item"
+            data-aos="fade-up"
+            data-service="materials"
+          >
             <div class="services__item--image">
               <img
                 src="./assets/services/brick.webp"
@@ -276,7 +293,11 @@
               budowlane
             </p>
           </div>
-          <div class="services__item" data-service="cleaning">
+          <div
+            class="services__item"
+            data-aos="fade-up"
+            data-service="cleaning"
+          >
             <div class="services__item--image top">
               <img
                 src="./assets/services/clean.webp"
@@ -287,7 +308,7 @@
             </div>
             <p data-i18n="cleaning">Sprzątanie</p>
           </div>
-          <div class="services__item" data-service="fragile">
+          <div class="services__item" data-aos="fade-up" data-service="fragile">
             <div class="services__item--image">
               <img
                 src="./assets/services/mirror.webp"
@@ -301,7 +322,7 @@
               ładunki
             </p>
           </div>
-          <div class="services__item" data-service="special">
+          <div class="services__item" data-aos="fade-up" data-service="special">
             <div class="services__item--image">
               <img
                 src="./assets/services/piano.webp"
@@ -315,7 +336,11 @@
               gabarytów
             </p>
           </div>
-          <div class="services__item" data-service="transfer">
+          <div
+            class="services__item"
+            data-aos="fade-up"
+            data-service="transfer"
+          >
             <div class="services__item--image">
               <img
                 src="./assets/services/travel.webp"
@@ -478,17 +503,20 @@
       <section id="pricing" class="pricing">
         <div class="container">
           <div class="pricing__header">
-            <h2 data-i18n="pricesTitle">Cennik</h2>
-            <p data-i18n="pricesSubtitle">
+            <h2 data-aos="zoom-in" data-i18n="pricesTitle">Cennik</h2>
+            <p data-aos="zoom-in" data-i18n="pricesSubtitle">
               Koszt poszczególnych usług, praca tragarzy i dojazd
             </p>
           </div>
 
           <div class="pricing__list">
-            <span data-i18n="minOrder" class="pricing__min-order main"
+            <span
+              data-aos="zoom-in"
+              data-i18n="minOrder"
+              class="pricing__min-order main"
               >Minimalne zamówienie: 2 godziny
             </span>
-            <div class="pricing__item">
+            <div data-aos="zoom-in" class="pricing__item">
               <div class="pricing__details">
                 <p class="pricing__service-name" data-i18n="arrival">
                   Dojazd (Podstawienie auta)
@@ -507,7 +535,7 @@
               </div>
             </div>
 
-            <div class="pricing__item">
+            <div data-aos="zoom-in" class="pricing__item">
               <div class="pricing__details">
                 <p class="pricing__service-name" data-i18n="moverService">
                   Usługa tragarza (pomocnika)
@@ -523,7 +551,7 @@
               </div>
             </div>
 
-            <div class="pricing__item">
+            <div data-aos="zoom-in" class="pricing__item">
               <div class="pricing__details">
                 <p class="pricing__service-name" data-i18n="packing">
                   Pakowanie + materiały
@@ -539,7 +567,7 @@
               </div>
             </div>
 
-            <div class="pricing__item pricing__item--no-min">
+            <div data-aos="zoom-in" class="pricing__item pricing__item--no-min">
               <div class="pricing__details">
                 <p class="pricing__service-name" data-i18n="intercity">
                   Transport międzymiastowy
@@ -576,7 +604,7 @@
               </div>
             </div>
 
-            <div class="pricing__item">
+            <div data-aos="zoom-in" class="pricing__item">
               <div class="pricing__details">
                 <p class="pricing__service-name" data-i18n="assembly">
                   Demontaż / montaż mebli i ustawienie
@@ -589,7 +617,7 @@
               </div>
             </div>
           </div>
-          <div class="pricing__order">
+          <div data-aos="zoom-in" class="pricing__order">
             <a href="#leadForm" class="btn__order btn__pricing">
               <svg
                 width="24"
@@ -627,7 +655,10 @@
                     fill="#ffffff"
                   />
                 </svg>
-                <p>3 <span data-i18n="years">lata</span></p>
+                <p>
+                  3
+                  <span data-i18n="years">lata</span>
+                </p>
               </div>
               <p class="statistic__item--subtitle" data-i18n="experience">
                 Doświadczenia w Polsce
@@ -647,7 +678,10 @@
                     fill="#ffffff"
                   />
                 </svg>
-                <p>5 <span data-i18n="year">lat</span></p>
+                <p>
+                  5
+                  <span data-i18n="year">lat</span>
+                </p>
               </div>
               <p class="statistic__item--subtitle" data-i18n="experienceMoving">
                 W branży transportowej
@@ -667,7 +701,7 @@
                     fill="#ffffff"
                   />
                 </svg>
-                <p>1000+</p>
+                <p class="counter"><span data-count="1000">0</span>+</p>
               </div>
               <p class="statistic__item--subtitle" data-i18n="completedOrders">
                 Zrealizowanych zleceń
@@ -676,7 +710,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section data-aos="fade-up" class="gallery">
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -729,7 +763,7 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-      <section class="reviews">
+      <section data-aos="fade-up" class="reviews">
         <div class="container">
           <h2 class="reviews__title" data-i18n="reviewTitle">
             Opinie naszych klientów
@@ -997,7 +1031,7 @@
           </div>
         </div>
       </section>
-      <section id="leadForm" class="leadForm">
+      <section data-aos="fade-up" id="leadForm" class="leadForm">
         <div class="container">
           <div class="leadForm__card">
             <div class="leadForm__card--header">
@@ -1593,6 +1627,7 @@
         ]
       }
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1njMqdvA4OLE76buczqvyBU7dCc4rBEk&libraries=places&language=en"
       async

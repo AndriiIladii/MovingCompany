@@ -7,6 +7,56 @@ import Swal from "sweetalert2";
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
+AOS.init({
+  once: true,
+});
+
+const counters = document.querySelectorAll(".counter span[data-count]");
+
+const container = document.querySelector(".statistic");
+
+let activated = false;
+
+window.addEventListener("scroll", () => {
+  if (!container) return;
+  if (
+    pageYOffset > container.offsetTop - container.offsetHeight - 400 &&
+    activated === false
+  ) {
+    counters.forEach((counter) => {
+      counter.innerText = 0;
+      let count = 0;
+
+      function updateCount() {
+        const target = parseInt(counter.dataset.count);
+
+        const step = Math.ceil(target / 50);
+
+        if (count < target) {
+          count += step;
+          if (count > target) count = target;
+
+          counter.innerText = count;
+          setTimeout(updateCount, 40);
+        } else {
+          counter.innerText = target;
+        }
+      }
+
+      updateCount();
+    });
+    activated = true;
+  } else if (
+    pageYOffset < container.offsetTop - window.innerHeight ||
+    (pageYOffset === 0 && activated === true)
+  ) {
+    counters.forEach((counter) => {
+      counter.innerText = 0;
+    });
+    activated = false;
+  }
+});
+
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
