@@ -185,6 +185,12 @@ document
         text: message,
       })
       .then((res) => {
+        if (typeof gtag === "function") {
+          gtag("event", "conversion", {
+            send_to: "AW-17826804804/USGWCPzp_uAbEMTovbRC",
+          });
+        }
+
         Swal.fire({
           title: "Спасибо!",
           text: "Ваша заявка успешно отправлена.",
@@ -193,7 +199,7 @@ document
           confirmButtonColor: "#f97316",
         });
         this.reset();
-        document.getElementById("dateTime").type = "text"; // Возвращаем плейсхолдер
+        document.getElementById("dateTime").type = "text";
       })
       .catch((err) => {
         console.warn(err);
