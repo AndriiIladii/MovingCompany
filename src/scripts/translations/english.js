@@ -1,6 +1,6 @@
 const translationsEn = {
   // Header //
-  title: "Warsaw Moving.<br/> Professional. Reliable.",
+  title: "Moving and cargo transportation.<br/> Careful. Fast. Affordable.",
   callUs: "Call now",
   onlineOrder: "Order online",
   modalPrice: "Price",
@@ -77,6 +77,8 @@ const translationsEn = {
   km: "km",
   tooltipBus: "Standard van",
   tooltipBusBig: "10 EP Van + Tail Lift",
+  cleaning: "Cleaning",
+  cleaningPrice: "Price negotiable",
 
   // Statistic //
   years: "years",

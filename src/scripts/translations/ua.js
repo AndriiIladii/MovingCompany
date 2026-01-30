@@ -1,7 +1,7 @@
 const translationsUa = {
   // Header //
-  title: `Переїзди Варшава.<br/> 
-  Професійно. Надійно.`,
+  title: `Переїзди та вантажоперевезення.<br/>
+   Акуратно. Швидко. За приємною ціною.`,
   callUs: "Подзвонити",
   onlineOrder: "Замовити онлайн",
   modalPrice: "Ціна",
@@ -79,6 +79,8 @@ const translationsUa = {
   element: "елемент",
   tooltipBus: "Звичайний бус",
   tooltipBusBig: "Бус на 10 EP + Гідроборт",
+  cleaning: "Клінінг",
+  cleaningPrice: "Ціна договірна",
 
   // Statistic //
   years: "роки",

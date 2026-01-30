@@ -1,7 +1,6 @@
 const translationsPl = {
   // Header //
-  title: `Przeprowadzki Warszawa.<br />
-    Profesjonalnie i Niezawodnie.`,
+  title: `Przeprowadzki i transport.<br/> Bezpiecznie. Szybko. W dobrej cenie`,
   callUs: "Zadzwoń",
   onlineOrder: "Zamów online",
   modalPrice: "Cena",
@@ -78,6 +77,8 @@ const translationsPl = {
   element: "element",
   tooltipBus: "Zwykły bus",
   tooltipBusBig: "Bus 10 EP + Winda załadowcza",
+  cleaning: "Sprzątanie",
+  cleaningPrice: "Cena do uzgodnienia",
 
   // Statistic //
   years: "lata",
