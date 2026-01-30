@@ -4,12 +4,17 @@
   background-color: #1f3a5f;
   color: #fff;
   padding: 48px 0;
-  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png"),
+  background-image:
+    url("https://www.transparenttextures.com/patterns/otis-redding.png"),
     url("../../assets/auto/cells.svg"),
     radial-gradient(circle at center, #3c5270 0%, #1f3a5f 100%);
 
   @media screen and (max-width: $breakpoint__xl) {
     padding: 32px;
+  }
+
+  @media screen and (max-width: $breakpoint__ms) {
+    padding: 0;
   }
 
   &__title {
@@ -200,6 +205,11 @@
 .auto .swiper-slide img {
   height: auto !important;
   width: auto !important;
+
+  @media screen and (max-width: $breakpoint__xs) {
+    height: 190px !important;
+    width: 300px !important;
+  }
 }
 
 .auto .swiper-slide {
