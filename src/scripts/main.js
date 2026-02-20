@@ -43,7 +43,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.5 },
 );
 if (statisticSection) {
   observer.observe(statisticSection);
@@ -61,11 +61,6 @@ const swiper = new Swiper(".swiper", {
   roundLengths: true,
   observer: true,
   observeParents: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
 
   breakpoints: {
     320: {
@@ -257,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "hidden";
     } else {
       console.error(
-        `Нет перевода для услуги: ${serviceType} на языке ${currentLang}`
+        `Нет перевода для услуги: ${serviceType} на языке ${currentLang}`,
       );
     }
   }
