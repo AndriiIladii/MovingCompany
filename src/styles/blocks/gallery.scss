@@ -11,11 +11,10 @@
 }
 
 .swiper-slide {
-  width: 100%;
-  max-width: 850px;
   cursor: grabbing;
   position: relative;
   transition: all 0.3s ease;
+  height: auto;
 
   img {
     display: block;
@@ -49,76 +48,76 @@
   }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #000 !important;
-  background-color: #fff !important;
-  width: 35px !important;
-  height: 35px !important;
-  border-radius: 50% !important;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
-  z-index: 20 !important;
-  top: 45% !important;
+// .swiper-button-prev,
+// .swiper-button-next {
+//   color: #000 !important;
+//   background-color: #fff !important;
+//   width: 35px !important;
+//   height: 35px !important;
+//   border-radius: 50% !important;
+//   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+//   z-index: 20 !important;
+//   top: 45% !important;
 
-  svg {
-    height: 50% !important;
-    object-fit: contain !important;
-    transform-origin: center !important;
-    width: 100% !important;
-    fill: currentColor !important;
-    pointer-events: none !important;
-  }
-}
+//   svg {
+//     height: 50% !important;
+//     object-fit: contain !important;
+//     transform-origin: center !important;
+//     width: 100% !important;
+//     fill: currentColor !important;
+//     pointer-events: none !important;
+//   }
+// }
 
-.swiper-button-prev {
-  left: 32% !important;
+// .swiper-button-prev {
+//   left: 32% !important;
 
-  @media screen and (max-width: $breakpoint__xxl) {
-    left: 31% !important;
-  }
+//   @media screen and (max-width: $breakpoint__xxl) {
+//     left: 30% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__xl) {
-    left: 12.5% !important;
-  }
+//   @media screen and (max-width: $breakpoint__xl) {
+//     left: 12.5% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__ml) {
-    left: 11% !important;
-  }
+//   @media screen and (max-width: $breakpoint__ml) {
+//     left: 11% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__ms) {
-    display: none !important;
-  }
-}
-.swiper-button-next {
-  right: 32% !important;
+//   @media screen and (max-width: $breakpoint__ms) {
+//     display: none !important;
+//   }
+// }
+// .swiper-button-next {
+//   right: 32% !important;
 
-  @media screen and (max-width: $breakpoint__xxl) {
-    right: 31% !important;
-  }
+//   @media screen and (max-width: $breakpoint__xxl) {
+//     right: 30% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__xl) {
-    right: 12.5% !important;
-  }
+//   @media screen and (max-width: $breakpoint__xl) {
+//     right: 12.5% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__ml) {
-    right: 11% !important;
-  }
+//   @media screen and (max-width: $breakpoint__ml) {
+//     right: 11% !important;
+//   }
 
-  @media screen and (max-width: $breakpoint__ms) {
-    display: none !important;
-  }
-}
+//   @media screen and (max-width: $breakpoint__ms) {
+//     display: none !important;
+//   }
+// }
 
-.swiper-pagination-bullets {
-  @media screen and (max-width: $breakpoint__ms) {
-    display: none !important;
-  }
-}
+// .swiper-pagination-bullets {
+//   @media screen and (max-width: $breakpoint__ms) {
+//     display: none !important;
+//   }
+// }
 
-.swiper-button-prev,
-.swiper-button-next {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+// .swiper-button-prev,
+// .swiper-button-next {
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }

@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-
-# Disallow: /wp-admin/
-# Disallow: /wp-includes/
-
-# Указание пути к карте сайта
-Sitemap: https://vitolio.pl/sitemap.xml
