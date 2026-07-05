@@ -149,6 +149,7 @@ flatpickr("#dateTime", {
   defaultMinute: 0,
 });
 
+// === Telegram Form Submit ===
 document
   .getElementById("telegramForm")
   .addEventListener("submit", function (e) {
@@ -156,33 +157,8 @@ document
 
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    let addressFrom = document.getElementById("addressFrom").value.trim();
-    let addressTo = document.getElementById("addressTo").value.trim();
-
-    const getGmpValue = (id) => {
-      const el = document.getElementById(id);
-      if (!el) return "";
-      const gmp = el.previousElementSibling;
-      if (gmp && gmp.tagName === "GMP-PLACE-AUTOCOMPLETE") {
-        if (gmp.inputElement instanceof HTMLInputElement) {
-          return gmp.inputElement.value;
-        }
-        for (const prop in gmp) {
-          try {
-            if (gmp[prop] instanceof HTMLInputElement) {
-              return gmp[prop].value;
-            }
-          } catch (e) {
-            continue;
-          }
-        }
-      }
-      return "";
-    };
-
-    if (!addressFrom) addressFrom = getGmpValue("addressFrom").trim();
-    if (!addressTo) addressTo = getGmpValue("addressTo").trim();
-
+    const addressFrom = document.getElementById("addressFrom").value.trim();
+    const addressTo = document.getElementById("addressTo").value.trim();
     const rawDateTime = document.getElementById("dateTime").value;
 
     const dateTimeFormatted = rawDateTime.replace("T", " ");
@@ -219,31 +195,6 @@ document
           confirmButtonColor: "#f97316",
         });
         this.reset();
-
-        // Очищаем Google Autocomplete поля вручную
-        const clearGmp = (id) => {
-          const el = document.getElementById(id);
-          if (!el) return;
-          const gmp = el.previousElementSibling;
-          if (gmp && gmp.tagName === "GMP-PLACE-AUTOCOMPLETE") {
-            if (gmp.inputElement instanceof HTMLInputElement) {
-              gmp.inputElement.value = "";
-            } else {
-              for (const prop in gmp) {
-                try {
-                  if (gmp[prop] instanceof HTMLInputElement) {
-                    gmp[prop].value = "";
-                  }
-                } catch (e) {
-                  continue;
-                }
-              }
-            }
-          }
-        };
-        clearGmp("addressFrom");
-        clearGmp("addressTo");
-
         document.getElementById("dateTime").type = "text";
       })
       .catch((err) => {
@@ -257,6 +208,37 @@ document
         });
       });
   });
+
+// === Initialize Google Places Autocomplete (OLD API) ===
+async function initGoogleAutocomplete(inputId) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+
+  try {
+    await google.maps.importLibrary("places");
+
+    const options = {
+      componentRestrictions: { country: "pl" },
+      fields: ["formatted_address"],
+      types: ["address"],
+    };
+
+    const autocomplete = new google.maps.places.Autocomplete(input, options);
+
+    autocomplete.addListener("place_changed", () => {
+      const place = autocomplete.getPlace();
+      if (place && place.formatted_address) {
+        console.log("Выбран адрес:", place.formatted_address);
+      }
+    });
+  } catch (e) {
+    console.warn("Google Maps Places API ошибка:", e);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  initGoogleAutocomplete("addressFrom");
+  initGoogleAutocomplete("addressTo");
+});
 
 const selectedLang = document.getElementById("selectedLang");
 const languageList = document.getElementById("languageList");
@@ -409,85 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-async function initGoogleAutocomplete(inputId) {
-  const input = document.getElementById(inputId);
-  if (!input) return;
 
-  try {
-    const { PlaceAutocompleteElement } =
-      await google.maps.importLibrary("places");
-
-    const autocomplete = new PlaceAutocompleteElement({
-      componentRestrictions: { country: "pl" },
-      types: ["address"],
-    });
-
-    autocomplete.setAttribute(
-      "placeholder",
-      input.getAttribute("placeholder") || "",
-    );
-
-    Object.assign(autocomplete.style, {
-      width: "100%",
-      height: "48px",
-      border: "1px solid #d1d5db",
-      borderRadius: "6px",
-      backgroundColor: "#fff",
-      fontSize: "1rem",
-      boxSizing: "border-box",
-      display: "block",
-      color: "#111",
-    });
-
-    autocomplete.style.setProperty("--gmpx-color-surface", "#fff");
-    autocomplete.style.setProperty("--gmpx-color-on-surface", "#111");
-    autocomplete.style.setProperty(
-      "--gmpx-color-on-surface-variant",
-      "#9ca3af",
-    );
-    autocomplete.style.setProperty("--gmpx-font-size-base", "1rem");
-
-    const iconSpan = input.parentNode.querySelector(".input-icon");
-    if (iconSpan) iconSpan.style.display = "none";
-
-    input.style.display = "none";
-    input.removeAttribute("required");
-    input.parentNode.insertBefore(autocomplete, input);
-
-    autocomplete.addEventListener("gmp-placeselect", async ({ place }) => {
-      if (!place) return;
-      await place.fetchFields({ fields: ["formattedAddress"] });
-      input.value = place.formattedAddress || "";
-      console.log("Выбран адрес:", place.formattedAddress);
-    });
-
-    autocomplete.addEventListener("keyup", () => {
-      const shadowInput = autocomplete.shadowRoot
-        ? autocomplete.shadowRoot.querySelector("input")
-        : null;
-      if (shadowInput) {
-        input.value = shadowInput.value;
-      } else if (autocomplete.inputValue !== undefined) {
-        input.value = autocomplete.inputValue;
-      }
-    });
-
-    autocomplete.addEventListener("focusout", () => {
-      const shadowInput = autocomplete.shadowRoot
-        ? autocomplete.shadowRoot.querySelector("input")
-        : null;
-      if (shadowInput && shadowInput.value) {
-        input.value = shadowInput.value;
-      }
-    });
-  } catch (e) {
-    console.warn("Google Maps Places API ошибка:", e);
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  initGoogleAutocomplete("addressFrom");
-  initGoogleAutocomplete("addressTo");
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
