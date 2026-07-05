@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Andrey/Desktop/Moving%20company%20Landing/src/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,0IAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Andrey/Desktop/Moving%20company%20Landing/src/app/page.tsx"],"sourcesContent":["\n\nexport default function Home() {\n  return (\n    <div className=\"flex flex-col items-center justify-center min-h-screen\">\n      <h1 className=\"text-4xl font-bold\">Vitolio — Moving Company</h1>\n      <p className=\"mt-4 text-lg text-zinc-500\">Миграция на Next.js в процессе 🚀</p>\n    </div>\n  );\n\n\n\n}\n"],"names":["Home","className"],"mappings":";;;;;;AAEe,SAASA;IACtB,qBACE,8OAAC;QAAIC,WAAU;;0BACb,8OAAC;gBAAGA,WAAU;0BAAqB;;;;;;0BACnC,8OAAC;gBAAEA,WAAU;0BAA6B;;;;;;;;;;;;AAMhD"}}]
+}

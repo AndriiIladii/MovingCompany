@@ -139,3 +139,12 @@
     background-color: #f0f0f0;
   }
 }
+
+/* New Places API autocomplete styling */
+gmp-place-autocomplete {
+  color-scheme: light;
+  --gmpx-color-surface: #ffffff;
+  --gmpx-color-on-surface: #111111;
+  --gmpx-color-on-surface-variant: #6b7280;
+  --gmpx-font-size-base: 1rem;
+}
