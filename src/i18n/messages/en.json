@@ -77,7 +77,8 @@
     "tooltipBus": "Standard van",
     "tooltipBusBig": "10 EP Van + Tail Lift",
     "cleaning": "Cleaning",
-    "cleaningPrice": "Price negotiable"
+    "cleaningPrice": "Price negotiable",
+    "onlineOrder": "Order online"
   },
   "statistic": {
     "years": "years",
