@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Golos_Text } from "next/font/google";
 import "./globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from "next-intl/server";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const golosText = Golos_Text({
+  variable: "--font-main",
+  subsets: ["latin", "cyrillic"],
 });
 
 export const metadata: Metadata = {
@@ -30,17 +23,19 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>
 }>) {
   const { locale } = await params;
-  const messages = await getMessages()
+  const messages = await getMessages();
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${golosText.variable} h-full antialiased font-main`}
     >
-      <body className="min-h-full flex flex-col"><NextIntlClientProvider messages={messages}>
-        <Header />
-        <Footer />
-        {children}
-      </NextIntlClientProvider></body>
+      <body className="min-h-full flex flex-col">
+        <NextIntlClientProvider messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

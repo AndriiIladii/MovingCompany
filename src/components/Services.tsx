@@ -12,7 +12,7 @@ const Services = () => {
 
                 {keys.map((item: any, index) => (
                     <div key={item} className="bg-white rounded-xl shadow p-6 text-center">
-                        <img src={`/images/services/${index + 1}.png`} alt={t(item)} />
+                        <img src={`images/services/${index + 1}.webp`} alt={t(item)} />
                         <p>{t(item)}</p>
                     </div>
                 ))}
