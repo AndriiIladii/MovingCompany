@@ -25,8 +25,8 @@ const Form = () => {
         message += `<b>Дата и время:</b> ${dateTimeFormatted}`;
 
 
-        const TOKEN = "8534201234:AAFafvbo6FoNnCm3wkwc5K3IVff4bbKFAMk";
-        const CHAT_ID = "-5059325929";
+        const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
+        const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 
 
         try {
@@ -52,7 +52,7 @@ const Form = () => {
 
 
     return (
-        <section data-aos="fade-up" id="leadForm" className="leadForm">
+        <section id="leadForm" className="leadForm">
             <div className="container">
                 <div className="leadForm__card">
                     <div className="leadForm__card--header">
@@ -75,7 +75,7 @@ const Form = () => {
                             </svg>
                             <h2>{t('formTitle')}</h2>
                         </div>
-                        <p className="leadForm__card--subtitle" data-i18n="">
+                        <p className="leadForm__card--subtitle">
                             {t('formSubTitle')}
                         </p>
                     </div>
@@ -102,7 +102,6 @@ const Form = () => {
                                 id="name"
                                 className="input-field"
                                 placeholder={t("formName")}
-                                data-i18n="formName"
                                 required
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}

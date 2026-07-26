@@ -10,7 +10,7 @@ const Hero = () => {
             <div className="container">
                 <div className="hero__wrapper">
                     <div className="hero__title">
-                        <h1 data-i18n="title" className="text-4xl font-bold text-white text-center">
+                        <h1 className="text-4xl font-bold text-white text-center">
                             {t('title')}
                         </h1>
                     </div>
@@ -22,12 +22,12 @@ const Hero = () => {
                         <div className="hero__contacts--wrapper">
                             <div className="hero__contacts--links">
                                 <a className="hero__contacts--link" href="tel:+48736335283">
-                                    <span data-i18n="callUs" className="bg-orange-500 rounded-lg px-6 py-3">{t('callUs')}</span>
+                                    <span className="bg-orange-500 rounded-lg px-6 py-3">{t('callUs')}</span>
                                 </a>
                             </div>
                             <div className="hero__contacts--order">
                                 <a href="#leadForm" className="btn__order">
-                                    <span data-i18n="onlineOrder" className="bg-orange-500 rounded-lg px-6 py-3">{t('onlineOrder')}</span>
+                                    <span className="bg-orange-500 rounded-lg px-6 py-3">{t('onlineOrder')}</span>
                                 </a>
                             </div>
                         </div>

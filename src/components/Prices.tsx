@@ -8,88 +8,84 @@ const Prices = () => {
     return (
         <div className="container">
             <div className="pricing__header">
-                <h2 data-aos="zoom-in" data-i18n="pricesTitle">{t('pricesTitle')}</h2>
-                <p data-aos="zoom-in" data-i18n="pricesSubtitle">
+                <h2>{t('pricesTitle')}</h2>
+                <p>
                     {t('pricesSubtitle')}
                 </p>
             </div>
 
             <div className="pricing__list">
                 <span
-                    data-aos="zoom-in"
-                    data-i18n="minOrder"
                     className="pricing__min-order main"
                 >{t('minOrder')}
                 </span>
-                <div data-aos="zoom-in" className="pricing__item">
+                <div className="pricing__item">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="arrival">
+                        <p className="pricing__service-name">
                             {t('arrival')}
                         </p>
-                        <p className="pricing__service-subtext" data-i18n="driverOnly">
+                        <p className="pricing__service-subtext">
                             {t('driverOnly')}
                         </p>
                     </div>
                     <div className="pricing__price">
                         <p className="pricing__price--hour">
-                            130 zł/<span data-i18n="hour">{t('hour')}</span>
+                            130 zł/<span>{t('hour')}</span>
                         </p>
                         <p className="pricing__price--min">
-                            260 zł/2 <span data-i18n="hours">{t('hours')}</span>
+                            260 zł/2 <span>{t('hours')}</span>
                         </p>
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" className="pricing__item">
+                <div className="pricing__item">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="moverService">
+                        <p className="pricing__service-name">
                             {t('moverService')}
                         </p>
                     </div>
                     <div className="pricing__price">
                         <p className="pricing__price--hour">
-                            40 zł/<span data-i18n="hour">{t('hour')}</span>
+                            40 zł/<span>{t('hour')}</span>
                         </p>
                         <p className="pricing__price--min">
-                            80 zł/2 <span data-i18n="hours">{t('hours')}</span>
+                            80 zł/2 <span>{t('hours')}</span>
                         </p>
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" className="pricing__item">
+                <div className="pricing__item">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="packing">
+                        <p className="pricing__service-name">
                             {t('packing')}
                         </p>
                     </div>
                     <div className="pricing__price">
                         <p className="pricing__price--hour">
-                            50 zł/<span data-i18n="hour">{t('hour')}</span>
+                            50 zł/<span>{t('hour')}</span>
                         </p>
                         <p className="pricing__price--min">
-                            100 zł/2 <span data-i18n="hours">{t('hours')}</span>
+                            100 zł/2 <span>{t('hours')}</span>
                         </p>
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" className="pricing__item pricing__item--no-min">
+                <div className="pricing__item pricing__item--no-min">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="intercity">
+                        <p className="pricing__service-name">
                             {t('intercity')}
                         </p>
                         <p
                             className="pricing__service-subtext"
-                            data-i18n="minOrderIntercity"
                         >
                             {t('minOrderIntercity')}
                         </p>
                     </div>
                     <div className="pricing__price pricing__price--info">
                         <p className="pricing__price--km">
-                            5 zł/<span data-i18n="km">{t('km')}</span>
+                            5 zł/<span>{t('km')}</span>
                             <span
                                 className="tooltip-wrapper"
-                                data-i18n="tooltipBus"
                                 data-tooltip="Zwykły bus"
                             >
                                 <img src="./assets/price/info.png" alt="description" />
@@ -97,10 +93,9 @@ const Prices = () => {
                         </p>
 
                         <p className="pricing__price--km">
-                            6 zł/<span data-i18n="km">{t('km')}</span>
+                            6 zł/<span>{t('km')}</span>
                             <span
                                 className="tooltip-wrapper"
-                                data-i18n="tooltipBusBig"
                                 data-tooltip="Bus 10 EP + Winda załadowcza"
                             >
                                 <img src="./assets/price/info.png" alt="description" />
@@ -109,33 +104,33 @@ const Prices = () => {
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" className="pricing__item">
+                <div className="pricing__item">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="assembly">
+                        <p className="pricing__service-name">
                             {t('assembly')}
                         </p>
                     </div>
                     <div className="pricing__price">
                         <p className="pricing__price--hour">
-                            70 - 100 zł/<span data-i18n="element">{t('element')}</span>
+                            70 - 100 zł/<span>{t('element')}</span>
                         </p>
                     </div>
                 </div>
 
-                <div data-aos="zoom-in" className="pricing__item">
+                <div className="pricing__item">
                     <div className="pricing__details">
-                        <p className="pricing__service-name" data-i18n="cleaning">
+                        <p className="pricing__service-name">
                             {t('cleaning')}
                         </p>
                     </div>
                     <div className="pricing__price">
                         <p className="pricing__price--hour">
-                            <span data-i18n="cleaningPrice">{t('cleaningPrice')}</span>
+                            <span>{t('cleaningPrice')}</span>
                         </p>
                     </div>
                 </div>
             </div>
-            <div data-aos="zoom-in" className="pricing__order">
+            <div className="pricing__order">
                 <a href="#leadForm" className="btn__order btn__pricing">
                     <svg
                         width="24"
@@ -149,7 +144,7 @@ const Prices = () => {
                             fill="white"
                         />
                     </svg>
-                    <span data-i18n="onlineOrder">{t('onlineOrder')}</span>
+                    <span>{t('onlineOrder')}</span>
                 </a>
             </div>
         </div>

@@ -72,7 +72,7 @@ const Statistic = () => {
                             </svg>
                             <p className="counter"><span data-count="1000">0</span>+</p>
                         </div>
-                        <p className="statistic__item--subtitle" data-i18n="completedOrders">
+                        <p className="statistic__item--subtitle">
                             {t('completedOrders')}
                         </p>
                     </div>
