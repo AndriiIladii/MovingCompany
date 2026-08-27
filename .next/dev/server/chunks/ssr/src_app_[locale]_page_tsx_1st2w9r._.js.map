@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Andrey/Desktop/Moving%20company%20Landing/src/app/%5Blocale%5D/page.tsx"],"sourcesContent":["'use client'\r\nimport { useTranslations } from 'next-intl'\r\n\r\nexport default function Home() {\r\n\r\n  const t = useTranslations('hero');\r\n\r\n  return (\r\n    <></>\r\n  );\r\n\r\n\r\n\r\n}\r\n"],"names":["Home","t"],"mappings":";;;;;AACA;AADA;;;AAGe,SAASA;IAEtB,MAAMC,IAAI,IAAA,yMAAe,EAAC;IAE1B,qBACE;AAKJ"}}]
+}
