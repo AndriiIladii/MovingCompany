@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["C:/Users/Andrey/Desktop/Moving company Landing/src/app/[locale]/page.tsx"],"sourcesContent":["'use client'\r\nimport { useTranslations } from 'next-intl'\r\n\r\nexport default function Home() {\r\n\r\n  const t = useTranslations('hero');\r\n\r\n  return (\r\n    <></>\r\n  );\r\n\r\n\r\n\r\n}\r\n"],"names":["c","_c","useTranslations","Home","$","$i","Symbol","for","t0"],"mappings":";;;;;AAAY,SAAAA,CAAA,IAAAC,EAAA;AACZ,SAASC,eAAe,QAAQ,WAAW;;;AAD3C,YAAY;;;AAGG;;IAAA,MAAAE,CAAA,OAAAH,gLAAA,EAAA;IAAA,IAAAG,CAAA,CAAA,EAAA,KAAA,oEAAA;QAAA,IAAA,IAAAC,EAAA,GAAA,GAAAA,EAAA,GAAA,GAAAA,EAAA,IAAA,EAAA;YAAAD,CAAA,CAAAC,EAAA,CAAA,GAAAC,MAAA,CAAAC,GAAA,CAAA;QAAA;QAAAH,CAAA,CAAA,EAAA,GAAA;IAAA;sNAEa,MAAM,CAAC;IAAA,IAAAI,EAAA;IAAA,IAAAJ,CAAA,CAAA,EAAA,KAAAE,MAAA,CAAAC,GAAA,CAAA,8BAAA;QAG/BC,EAAA,iBAAA,KAAK;QAAAJ,CAAA,CAAA,EAAA,GAAAI,EAAA;IAAA,OAAA;QAAAA,EAAA,GAAAJ,CAAA,CAAA,EAAA;IAAA;IAAA,OAALI,EAAK;AAAA;;;QAHGN,4MAAe;;;KAFZC,KAAA","ignoreList":[]}}]
+}
